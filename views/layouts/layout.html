@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>小程序商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-title" content="小程序商城" />
+    <link rel="icon" type="image/png" href="/assets/user/i/favicon.ico" />
+    <link rel="stylesheet" href="/assets/user/css/wy_modality.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/user/vendors/iconfonts/mdi/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/user/vendors/css/vendor.bundle.base.css"
+    />
+    <link rel="stylesheet" href="/assets/layui/css/layui.css" media="all" />
+    <script src="/assets/user/js/jquery.min.js"></script>
+    <script src="/assets/user/js/global.js"></script>
+    <script>
+      BASE_URL = '{$base_url}';
+      STORE_URL = '/index.php?s=/user';
+    </script>
+  </head>
+
+  <body data-type="">
+    <div class="layer-g tpl-g">
+      <!-- 头部 -->
+      <header class="tpl-header">
+        <!-- 右侧内容 -->
+        <div class="tpl-header-fluid">
+          <!-- 侧边切换 -->
+          <div class="layer-fl tpl-header-button switch-button">
+            <i class="iconfont icon-menufold"></i>
+          </div>
+          <!-- 刷新页面 -->
+          <div class="layer-fl tpl-header-button refresh-button">
+            <i class="iconfont icon-refresh"></i>
+            <div class="tpl-header-text-gl"><a href="#">功能列表</a></div>
+          </div>
+          <!-- 其它功能-->
+          <div class="layer-fr tpl-header-navbar">
+            <ul>
+              <!-- 欢迎语 -->
+              <li class="layer-text-sm tpl-header-navbar-welcome">
+                <a href="#"
+                  >欢迎你，<span>{{ store['user_name'] }}</span>
+                </a>
+              </li>
+              <!-- 意见箱 -->
+              <li>
+                <a href="{:url('user/index/proposal')}">提交建议</a>
+              </li>
+
+              <!-- 退出 -->
+              <li class="layer-text-sm">
+                <a href="{:url('user/login/logout')}">
+                  <i class="iconfont icon-tuichu"></i> 退出
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- 侧边导航栏 -->
+      <div class="left-sidebar dis-flex">
+        <!-- 一级菜单 -->
+        <ul class="sidebar-nav">
+          <li class="sidebar-nav-heading">
+            <img class="logo" src="/assets/user/img/logo.png" width="60" />
+          </li>
+          {% for item in menus %}
+
+          <li class="sidebar-nav-link">
+            <a
+              href="{% if item['url'] %}{{
+                item['url']
+              }}{%else%}javascript:void(0);{%endif%}"
+              class="{% if item['url'] == request.url %}active{% endif %}"
+            >
+              <i
+                class="mdi sidebar-nav-link-logo menu-icon {{ item['icon'] }}"
+              ></i>
+              {{ item['name'] }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- 子级菜单-->
+
+        <ul class="left-sidebar-second">
+          <!-- <li class="sidebar-second-title">{$menu[$group]['name']}</li> -->
+          <li class="sidebar-second-item">
+            <!-- 二级菜单-->
+            <a href="" class="two-active" style="">
+              商品设置
+            </a>
+
+            <!-- 三级菜单-->
+            <div class="sidebar-third-item">
+              <!--  <a href="javascript:void(0);"
+                                   class="sidebar-nav-sub-title {$item['active'] ? 'active' : ''}">
+                                    <i class="iconfont icon-caret"></i>
+                                    {$item['name']}
+                                </a>  -->
+
+              <ul class="sidebar-third-nav-sub">
+                <li>
+                  <a class="" href=""> 商品分类</a>
+                </li>
+                <li>
+                  <a class="" href=""> 商品列表</a>
+                </li>
+                <li>
+                  <a class="" href=""> 商品类型</a>
+                </li>
+                <li>
+                  <a class="" href=""> 商品规格</a>
+                </li>
+                <li>
+                  <a class="" href=""> 商品属性</a>
+                </li>
+                <li>
+                  <a class="" href=""> 品牌列表</a>
+                </li>
+                <li>
+                  <a class="" href=""> 商品评论</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 内容区域 start -->
+      <div
+        class="tpl-content-wrapper {if isset($second.list) eq null}no-sidebar-second{/if}"
+      >
+        {% block center%}{%endblock%}
+      </div>
+      <!-- 内容区域 end -->
+    </div>
+    <script src="/assets/user/js/validform.min.js"></script>
+    <!-- 提交 -->
+    <script src="/assets/user/js/jquery.form.min.js"></script>
+    <script src="/assets/user/js/webuploader.html5only.js"></script>
+    <script src="/assets/user/js/art-template.js"></script>
+    <script src="/assets/user/js/app.js"></script>
+    <script src="/assets/user/js/file.library.js"></script>
+    <script src="/assets/layui/layui.all.js" charset="utf-8"></script>
+  </body>
+</html>
