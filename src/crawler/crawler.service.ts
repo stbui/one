@@ -6,6 +6,7 @@ import { CrawlerEntity } from './crawler.entity';
 import { Crawler_TOKEN } from './crawler.constants';
 
 const request = require('request');
+import { Schedule } from './proxy';
 
 @Injectable()
 export class CrawlerService extends CrudService<CrawlerEntity> {
@@ -150,8 +151,11 @@ export class CrawlerService extends CrudService<CrawlerEntity> {
             },
         };
 
-        console.log(option);
-        this.httpRequest(option);
+        const schedule = new Schedule(() => {
+            this.httpRequest(option);
+        });
+
+        schedule.start();
     }
 
     async execute() {
@@ -169,8 +173,9 @@ export class CrawlerService extends CrudService<CrawlerEntity> {
                     return reject(error);
                 }
 
+                console.log('===');
+                console.log('request', options);
                 console.log('response', JSON.parse(body));
-
                 resolve(JSON.parse(body));
             });
         });

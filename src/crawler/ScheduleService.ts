@@ -17,16 +17,15 @@ export class ScheduleService extends NestSchedule {
         console.log('executing cron job');
     }
 
-    @Timeout(5000)
+    @Timeout(500)
     onceJob() {
         console.log('executing once job');
+        this.crawlerService.execute();
     }
 
     @Interval(2000)
     intervalJob() {
-        console.log('executing interval job');
-        this.crawlerService.execute();
-
-        return false;
+        // console.log('executing interval job');
+        return true;
     }
 }
