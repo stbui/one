@@ -16,8 +16,11 @@ import { LoginModule } from './login/login.module';
 import { MarketModule } from './market/market.module';
 import { CrawlerModule } from './crawler/crawler.module';
 
+import { ScheduleModule } from 'nest-schedule';
+
 @Module({
     imports: [
+        ScheduleModule.register(),
         DatabaseModule,
         StoreModule,
         CategoryModule,
