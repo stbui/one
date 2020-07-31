@@ -11,7 +11,7 @@ import { CrawlerController } from './crawler.controller';
 import { CrawlerService } from './crawler.service';
 import { CrawlerProviders } from './crawler.providers';
 import { CrawlerProxyMiddleware } from './crawler.middleware';
-import { ScheduleService } from './ScheduleService';
+import { TasksService } from './tasks.service';
 
 @Module({
     imports: [HttpModule, DatabaseModule],
@@ -20,7 +20,7 @@ import { ScheduleService } from './ScheduleService';
         LayoutService,
         CrawlerService,
         ...CrawlerProviders,
-        ScheduleService,
+        TasksService,
     ],
     exports: [CrawlerService],
 })
@@ -31,4 +31,3 @@ export class CrawlerModule {
             .forRoutes({ path: 'api/zfl/', method: RequestMethod.ALL });
     }
 }
-

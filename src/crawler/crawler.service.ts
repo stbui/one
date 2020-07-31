@@ -1,4 +1,4 @@
-import { Injectable, Inject, HttpService } from '@nestjs/common';
+import { Injectable, Inject, HttpService, Logger } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { CrudService } from '../common/crud/crud.service';
 
@@ -10,6 +10,8 @@ import { Schedule } from './proxy';
 
 @Injectable()
 export class CrawlerService extends CrudService<CrawlerEntity> {
+    private readonly logger = new Logger(CrawlerService.name);
+
     constructor(
         @Inject(Crawler_TOKEN)
         protected readonly repository: Repository<CrawlerEntity>,
@@ -175,7 +177,7 @@ export class CrawlerService extends CrudService<CrawlerEntity> {
 
                 console.log('===');
                 console.log('request', options);
-                console.log('response', JSON.parse(body));
+                this.logger.verbose('response', JSON.parse(body));
                 resolve(JSON.parse(body));
             });
         });

@@ -15,12 +15,13 @@ import { WebUserModule } from './web-user/web-user.module';
 import { LoginModule } from './login/login.module';
 import { MarketModule } from './market/market.module';
 import { CrawlerModule } from './crawler/crawler.module';
+import { ApiServiceModule } from './api-service/api-service.module';
 
-import { ScheduleModule } from 'nest-schedule';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
     imports: [
-        ScheduleModule.register(),
+        ScheduleModule.forRoot(),
         DatabaseModule,
         StoreModule,
         CategoryModule,
@@ -34,6 +35,7 @@ import { ScheduleModule } from 'nest-schedule';
         LoginModule,
         MarketModule,
         CrawlerModule,
+        ApiServiceModule,
     ],
     controllers: [AppController],
     providers: [AppService, LayoutService],
