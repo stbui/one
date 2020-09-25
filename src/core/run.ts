@@ -1,15 +1,21 @@
 import "reflect-metadata";
-import express from "express";
+import * as express from "express";
 import { RouteDefinition } from "./RouteDefinition";
+import { IP, PORT } from "./config";
+
+import { G } from "./gateway";
 
 const app = express();
 
-const port = Number(process.env.PORT) || 8080;
-
 export class Runner {
   static run(controllers) {
+    // 健康检查
     app.get("/health", (req, res) => res.status(200).send("OK"));
 
+    //
+    G(app);
+
+    // 路由的实现
     controllers.forEach((controller) => {
       const instance = new controller();
       const prefix = Reflect.getMetadata("prefix", controller);
@@ -37,8 +43,8 @@ export class Runner {
   }
 
   static bootstrap() {
-    app.listen(port, () => {
-      console.log(`Started proxy on http://127.0.0.1:${port}`);
+    app.listen(PORT, () => {
+      console.log(`Started proxy on http://${IP}:${PORT}`);
     });
   }
 }

@@ -11,19 +11,17 @@
     "build:cjs": "rm -rf ./lib && tsc",
     "build:esm": "rm -rf ./esm && tsc --outDir esm --module es2015",
     "watch": "tsc --watch",
-    "start": "nodemon lib/index.js"
+    "start": "tsc && nodemon lib/index.js"
   },
   "engines": {
     "node": ">=6"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13",
-    "compression": "^1.7.4",
-    "consolidate": "^0.16.0",
     "express": "^4.17.1",
-    "morgan": "^1.10.0",
     "http-proxy-middleware": "^1.0.5",
-    "lowdb": "^1.0.0",
+    "query-string": "^6.13.2",
+    "request": "^2.88.2",
     "typescript": "^4.0.2"
   },
   "devDependencies": {

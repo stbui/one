@@ -1,10 +1,12 @@
 import "reflect-metadata";
-import express from "express";
+import * as express from "express";
+import { IP, PORT } from "./config";
+import { G } from "./gateway";
 const app = express();
-const port = Number(process.env.PORT) || 8080;
 export class Runner {
     static run(controllers) {
         app.get("/health", (req, res) => res.status(200).send("OK"));
+        G(app);
         controllers.forEach((controller) => {
             const instance = new controller();
             const prefix = Reflect.getMetadata("prefix", controller);
@@ -24,8 +26,8 @@ export class Runner {
         this.bootstrap();
     }
     static bootstrap() {
-        app.listen(port, () => {
-            console.log(`Started proxy on http://127.0.0.1:${port}`);
+        app.listen(PORT, () => {
+            console.log(`Started proxy on http://${IP}:${PORT}`);
         });
     }
 }

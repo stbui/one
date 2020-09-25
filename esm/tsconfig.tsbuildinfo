@@ -161,68 +161,28 @@
         "signature": "d2f31f19e1ba6ed59be9259d660a239d9a3fcbbc8e038c6b2009bde34b175fed",
         "affectsGlobalScope": false
       },
-      "../dist/index.d.ts": {
-        "version": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "../dist/controller/gateway.d.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../dist/controller/home.d.ts": {
-        "version": "3fcac82cfd1f8ffb25bbc69ddbfee6bfb9349b3a7161e44fdd30f5656819f1b3",
-        "signature": "3fcac82cfd1f8ffb25bbc69ddbfee6bfb9349b3a7161e44fdd30f5656819f1b3",
-        "affectsGlobalScope": false
-      },
-      "../dist/controller/metadata.d.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
       "../node_modules/reflect-metadata/index.d.ts": {
         "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
         "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
         "affectsGlobalScope": true
-      },
-      "../dist/core/controller.d.ts": {
-        "version": "4292dc191f6e6916566c1f1a26afd363ddddf2fd29c70062420b146606b11f8a",
-        "signature": "4292dc191f6e6916566c1f1a26afd363ddddf2fd29c70062420b146606b11f8a",
-        "affectsGlobalScope": false
-      },
-      "../dist/core/get.d.ts": {
-        "version": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
-        "signature": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
-        "affectsGlobalScope": false
-      },
-      "../dist/core/post.d.ts": {
-        "version": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
-        "signature": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
-        "affectsGlobalScope": false
-      },
-      "../dist/core/routedefinition.d.ts": {
-        "version": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
-        "signature": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
-        "affectsGlobalScope": false
-      },
-      "../dist/core/run.d.ts": {
-        "version": "fb51481d0975ab7dae7039003db8a1dad48489d86bc07439f2f917b7825b3a6d",
-        "signature": "fb51481d0975ab7dae7039003db8a1dad48489d86bc07439f2f917b7825b3a6d",
-        "affectsGlobalScope": false
-      },
-      "../dist/core/index.d.ts": {
-        "version": "155c31b3d96fad8a1edf684d6933f8d4b85d3fd437681571f98ffb3b518025ab",
-        "signature": "155c31b3d96fad8a1edf684d6933f8d4b85d3fd437681571f98ffb3b518025ab",
-        "affectsGlobalScope": false
       },
       "../src/core/routedefinition.ts": {
         "version": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
         "signature": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
         "affectsGlobalScope": false
       },
+      "../src/core/config.ts": {
+        "version": "416ca091644260bade319216f4b8e251eaea01cffc4e45f8f1dda3afbfe4082a",
+        "signature": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
+        "affectsGlobalScope": false
+      },
+      "../src/core/gateway.ts": {
+        "version": "4db916e3596eabf556085f5da6c8eb0e91f398c295f10d0c57314837f4a66ecd",
+        "signature": "4b7893a23860c522dcb2a2a317d824de0cf6874410585a7c3f87ed092b51cfc1",
+        "affectsGlobalScope": false
+      },
       "../src/core/run.ts": {
-        "version": "56486c82d7784d09dab87ee78c9a8a5d0d0044d524e74e0b915bcc80121e65c1",
+        "version": "adf28fce546408b0c51a3c210c550a0b845961b42e8144de4b204725096793ff",
         "signature": "fb51481d0975ab7dae7039003db8a1dad48489d86bc07439f2f917b7825b3a6d",
         "affectsGlobalScope": false
       },
@@ -249,11 +209,6 @@
       "../src/index.ts": {
         "version": "65f6cab509feec1098d0464e378b50a294d6fd8822046cb2b0bb01bf7fb4afee",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "../src/controller/gateway.ts": {
-        "version": "3157150e36af76e40426221f69ffef7910a5846b94faa90262113b63e8ff574c",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
       },
       "../src/controller/metadata.ts": {
@@ -523,23 +478,6 @@
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
-      "../dist/core/controller.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
-      "../dist/core/get.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
-      "../dist/core/index.d.ts": [
-        "../dist/core/controller.d.ts",
-        "../dist/core/get.d.ts",
-        "../dist/core/run.d.ts"
-      ],
-      "../dist/core/post.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
-      "../dist/core/run.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
       "../node_modules/@types/http-proxy/index.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -721,6 +659,10 @@
       "../src/core/controller.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
+      "../src/core/gateway.ts": [
+        "../node_modules/@types/node/querystring.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
       "../src/core/get.ts": [
         "../node_modules/reflect-metadata/index.d.ts",
         "../src/core/routedefinition.ts"
@@ -736,6 +678,8 @@
       ],
       "../src/core/run.ts": [
         "../node_modules/reflect-metadata/index.d.ts",
+        "../src/core/config.ts",
+        "../src/core/gateway.ts",
         "../src/core/routedefinition.ts"
       ],
       "../src/index.ts": [
@@ -744,23 +688,6 @@
       ]
     },
     "exportedModulesMap": {
-      "../dist/core/controller.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
-      "../dist/core/get.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
-      "../dist/core/index.d.ts": [
-        "../dist/core/controller.d.ts",
-        "../dist/core/get.d.ts",
-        "../dist/core/run.d.ts"
-      ],
-      "../dist/core/post.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
-      "../dist/core/run.d.ts": [
-        "../node_modules/reflect-metadata/index.d.ts"
-      ],
       "../node_modules/@types/http-proxy/index.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -955,16 +882,6 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "../dist/controller/gateway.d.ts",
-      "../dist/controller/home.d.ts",
-      "../dist/controller/metadata.d.ts",
-      "../dist/core/controller.d.ts",
-      "../dist/core/get.d.ts",
-      "../dist/core/index.d.ts",
-      "../dist/core/post.d.ts",
-      "../dist/core/routedefinition.d.ts",
-      "../dist/core/run.d.ts",
-      "../dist/index.d.ts",
       "../node_modules/@types/http-proxy/index.d.ts",
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
@@ -1046,10 +963,11 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../src/controller/gateway.ts",
       "../src/controller/home.ts",
       "../src/controller/metadata.ts",
+      "../src/core/config.ts",
       "../src/core/controller.ts",
+      "../src/core/gateway.ts",
       "../src/core/get.ts",
       "../src/core/index.ts",
       "../src/core/post.ts",
