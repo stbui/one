@@ -1,10 +1,16 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "src",
-    "module": "CommonJS",
-  },
-  "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.spec.js"],
-  "include": ["src"]
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./lib",
+    "baseUrl": "./",
+    "incremental": true
+  }
 }

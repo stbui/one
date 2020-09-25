@@ -229,15 +229,15 @@
 //   });
 // };
 
-const http = require('http');
-const url = require('url');
-const request = require('request');
+// const http = require('http');
+// const url = require('url');
+// const request = require('request');
 
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
-const adapter = new FileSync('db.json');
-const db = low(adapter);
-const querystring = require('querystring');
+// const low = require('lowdb');
+// const FileSync = require('lowdb/adapters/FileSync');
+// const adapter = new FileSync('db.json');
+// const db = low(adapter);
+// const querystring = require('querystring');
 
 // function gateway(req, res, options) {
 //     // var u = url.parse(req.url);
@@ -276,8 +276,8 @@ const querystring = require('querystring');
 //     sReq.end();
 // }
 
-module.exports = app => {
-    const apis = db.get('api').value();
+// module.exports = app => {
+//     const apis = db.get('api').value();
 
     // apis.map(api => {
     //     app.get(api.requestConfig.path, (req, res) => {
@@ -309,36 +309,36 @@ module.exports = app => {
     //     });
     // });
 
-    apis.map(api => {
-        const method = api.requestConfig.method.toLowerCase();
-        app[method](api.requestConfig.path, (req, res) => {
-            var u = url.parse(req.url);
+    // apis.map(api => {
+    //     const method = api.requestConfig.method.toLowerCase();
+    //     app[method](api.requestConfig.path, (req, res) => {
+    //         var u = url.parse(req.url);
 
-            let query = querystring.parse(u.query);
-            let newQuery = querystring.parse(u.query);
-            api.serviceParameters.map(param => {
-                const value = query[param.relevantRequestParameterName];
-                if (value) {
-                    newQuery[param.name] = query[param.relevantRequestParameterName];
-                    delete newQuery[param.relevantRequestParameterName];
-                }
-            });
+    //         let query = querystring.parse(u.query);
+    //         let newQuery = querystring.parse(u.query);
+    //         api.serviceParameters.map(param => {
+    //             const value = query[param.relevantRequestParameterName];
+    //             if (value) {
+    //                 newQuery[param.name] = query[param.relevantRequestParameterName];
+    //                 delete newQuery[param.relevantRequestParameterName];
+    //             }
+    //         });
 
-            newQuery = Object.keys(newQuery).length ? '?' + querystring.stringify(newQuery) : '';
+    //         newQuery = Object.keys(newQuery).length ? '?' + querystring.stringify(newQuery) : '';
 
-            console.log(`http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`);
+    //         console.log(`http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`);
 
-            request({
-                url: `http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`,
-                method: api.serviceConfig.method,
-                body: JSON.stringify(req.body),
-                headers: {
-                    cookie: req.get('cookie'),
-                    'Content-Type': 'application/json',
-                },
-            }).pipe(res);
-        });
-    });
+    //         request({
+    //             url: `http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`,
+    //             method: api.serviceConfig.method,
+    //             body: JSON.stringify(req.body),
+    //             headers: {
+    //                 cookie: req.get('cookie'),
+    //                 'Content-Type': 'application/json',
+    //             },
+    //         }).pipe(res);
+    //     });
+    // });
 
     // app.get('/api/jonsnow/v1/api/getRoles', (req, res) => {
     //     var u = url.parse(req.url);
@@ -364,4 +364,4 @@ module.exports = app => {
     //         },
     //     }).pipe(res);
     // });
-};
+// };
