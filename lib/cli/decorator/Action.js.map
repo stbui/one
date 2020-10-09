@@ -1,0 +1,1 @@
+{"version":3,"file":"Action.js","sourceRoot":"","sources":["../../../src/cli/decorator/Action.ts"],"names":[],"mappings":";;;AAAA,4BAA0B;AAC1B,4CAAwC;AAE3B,QAAA,MAAM,GAAG,GAAoB,EAAE;IAC1C,OAAO,CAAC,MAAW,EAAE,WAAmB,EAAQ,EAAE;QAChD,OAAO,CAAC,cAAc,CACpB,oBAAQ,CAAC,iBAAiB,EAC1B,WAAW,EACX,MAAM,CAAC,WAAW,CACnB,CAAC;IACJ,CAAC,CAAC;AACJ,CAAC,CAAC"}

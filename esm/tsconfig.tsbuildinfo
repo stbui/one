@@ -227,8 +227,8 @@
         "affectsGlobalScope": false
       },
       "../src/cli/constants/metadata.ts": {
-        "version": "ebb4a92490af192ae18a2ac7235648f67347d3c5c126ee06bf524578e7d8ec43",
-        "signature": "1c476b694a418c116334fc8943a26314b010362ecb4677dad733ef80c0b1ab90",
+        "version": "09aeddb894fbcfc034450632ef8542da08769d33cf0e70978787baff26222dc5",
+        "signature": "5a77f5b5060ebb09477bdba0ce14f3b4def7a3e4bc8e3465bb6183a50e359b79",
         "affectsGlobalScope": false
       },
       "../src/cli/constants/index.ts": {
@@ -237,7 +237,7 @@
         "affectsGlobalScope": false
       },
       "../src/cli/container.ts": {
-        "version": "3f9b54119bd643a5db185b94b1b68d9d2316fb38030fb4bed0a0ce2b86c90a97",
+        "version": "5107adabaaa95d13e33a6603ca10f1b476900a254c021fb81d53938d4ef7ed51",
         "signature": "8aa89c9301af30f3902a098ee7b08618ff56565fe386d7cfdfbbabb3867c4b2a",
         "affectsGlobalScope": false
       },
@@ -256,14 +256,19 @@
         "signature": "e8c83ee87d1f0d85109386a0e756670a5d5b007e016f9f473ad322027ece875e",
         "affectsGlobalScope": false
       },
+      "../src/cli/decorator/action.ts": {
+        "version": "f6cf7cfee6fef552ecd07d9772e43bd3ce93cce05782bf1f1e741097e5998501",
+        "signature": "61882fcd1ac93449d268f7d6ae579a7e4eda192eecec13427adb6a081cc90a14",
+        "affectsGlobalScope": false
+      },
       "../src/cli/decorator/index.ts": {
-        "version": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
-        "signature": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
+        "version": "25967c7ec0a7c2e5618b37919d2c509aece9491f5c2daf5b371edffa82ebba78",
+        "signature": "25967c7ec0a7c2e5618b37919d2c509aece9491f5c2daf5b371edffa82ebba78",
         "affectsGlobalScope": false
       },
       "../src/cli/index.ts": {
-        "version": "00a7a73ac95bb14783d77cd94e78708b7ced21b99990c12e4a603ddb52f71e1c",
-        "signature": "37841736104993750e9b90fa6c5f8eb53064f9ae1b38f44a6e98cd0149e20e53",
+        "version": "7d0f9a170ebcfbf11a6bcddff8e0363e5387ddcd8da4d247b82f7999b6342932",
+        "signature": "eb409a0135e25f7e08f4f2c47b449e5de44d046b7547171c1d18a08f7e655621",
         "affectsGlobalScope": false
       },
       "../src/controller/metadata.ts": {
@@ -747,11 +752,16 @@
         "../src/cli/command.ts",
         "../src/cli/constants/index.ts"
       ],
+      "../src/cli/decorator/action.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/constants/index.ts"
+      ],
       "../src/cli/decorator/command.ts": [
         "../node_modules/reflect-metadata/index.d.ts",
         "../src/cli/constants/index.ts"
       ],
       "../src/cli/decorator/index.ts": [
+        "../src/cli/decorator/action.ts",
         "../src/cli/decorator/command.ts",
         "../src/cli/decorator/inject.ts",
         "../src/cli/decorator/option.ts"
@@ -995,10 +1005,14 @@
       "../src/cli/container.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
+      "../src/cli/decorator/action.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
       "../src/cli/decorator/command.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
       "../src/cli/decorator/index.ts": [
+        "../src/cli/decorator/action.ts",
         "../src/cli/decorator/command.ts",
         "../src/cli/decorator/inject.ts",
         "../src/cli/decorator/option.ts"
@@ -1129,6 +1143,7 @@
       "../src/cli/constants/index.ts",
       "../src/cli/constants/metadata.ts",
       "../src/cli/container.ts",
+      "../src/cli/decorator/action.ts",
       "../src/cli/decorator/command.ts",
       "../src/cli/decorator/index.ts",
       "../src/cli/decorator/inject.ts",

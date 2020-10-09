@@ -9,6 +9,7 @@ export declare class Common {
 }
 export declare class Webpack extends Common {
     version: string;
+    run(): void;
 }
 export declare class Babel extends Common {
     version: string;

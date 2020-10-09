@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import "reflect-metadata";
-import { Command, Option } from "./decorator";
+import { Command, Option, Action } from "./decorator";
 import { Container } from "./Container";
 import "./Command";
 export * from "./constants";
@@ -46,7 +46,16 @@ let Webpack = class Webpack extends Common {
         super(...arguments);
         this.version = "1.1.1";
     }
+    run() {
+        console.log(`demo command run`);
+    }
 };
+__decorate([
+    Action(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], Webpack.prototype, "run", null);
 Webpack = __decorate([
     Command("webpack")
 ], Webpack);

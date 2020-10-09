@@ -39,6 +39,11 @@ export class Container {
             });
           }
         });
+
+        const run = Reflect.getMetadata(metadata.ACTION_IDENTIFIER, command);
+        if (run) {
+          factory[run]();
+        }
       }
     });
   }

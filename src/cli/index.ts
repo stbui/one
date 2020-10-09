@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { Command, Option } from "./decorator";
+import { Command, Option, Action } from "./decorator";
 import { Container } from "./Container";
 import "./Command";
 
@@ -52,6 +52,11 @@ export class Webpack extends Common {
   //   });
   //   console.log("");
   // }
+
+  @Action()
+  run() {
+    console.log(`demo command run`);
+  }
 }
 
 @Command("babel")
