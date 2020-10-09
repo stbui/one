@@ -176,13 +176,23 @@
         "signature": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
         "affectsGlobalScope": false
       },
+      "../node_modules/query-string/index.d.ts": {
+        "version": "482bacbf652d1ab59ee829481c0a873936d59383c696b3f37ac07feecb523b4c",
+        "signature": "482bacbf652d1ab59ee829481c0a873936d59383c696b3f37ac07feecb523b4c",
+        "affectsGlobalScope": false
+      },
+      "../src/core/db.json": {
+        "version": "22bd74d39dd929e08b478d36d9f959a17fb89c429bdc32d324ee9e89d91ce62c",
+        "signature": "2e3401c30a0446e2277a00ce24eac4dfbff98ebca715a79ba2b5e6dcb9e68b9f",
+        "affectsGlobalScope": true
+      },
       "../src/core/gateway.ts": {
-        "version": "4db916e3596eabf556085f5da6c8eb0e91f398c295f10d0c57314837f4a66ecd",
+        "version": "dad6533fe57849d89e7ea8bea67cf855a6aba2c95fcd3022dd9dc4953fe9e191",
         "signature": "4b7893a23860c522dcb2a2a317d824de0cf6874410585a7c3f87ed092b51cfc1",
         "affectsGlobalScope": false
       },
       "../src/core/run.ts": {
-        "version": "adf28fce546408b0c51a3c210c550a0b845961b42e8144de4b204725096793ff",
+        "version": "763d57a31a44c50908b2bde68b379edb611231b2cef82a7b23c4bdf2831a245c",
         "signature": "fb51481d0975ab7dae7039003db8a1dad48489d86bc07439f2f917b7825b3a6d",
         "affectsGlobalScope": false
       },
@@ -211,6 +221,51 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
+      "../src/cli/command.ts": {
+        "version": "61efc2cb5921daf7dfa9de8c600d429c3fcd9ff9326ab383dc309cc241e46d16",
+        "signature": "a0d999777dbe65dbee130844bf17712c60a291fd3c8e540217d119334cda58e9",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/constants/metadata.ts": {
+        "version": "ebb4a92490af192ae18a2ac7235648f67347d3c5c126ee06bf524578e7d8ec43",
+        "signature": "1c476b694a418c116334fc8943a26314b010362ecb4677dad733ef80c0b1ab90",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/constants/index.ts": {
+        "version": "b667aa8bca0287600b70e06a9c0a4a9555d662c519ff736f2156b1dd2fd69307",
+        "signature": "b667aa8bca0287600b70e06a9c0a4a9555d662c519ff736f2156b1dd2fd69307",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/container.ts": {
+        "version": "3f9b54119bd643a5db185b94b1b68d9d2316fb38030fb4bed0a0ce2b86c90a97",
+        "signature": "8aa89c9301af30f3902a098ee7b08618ff56565fe386d7cfdfbbabb3867c4b2a",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/command.ts": {
+        "version": "98123ad52612400c48f1e768660d7d1f3553fe5a714c3eb2946768d4b23a00a2",
+        "signature": "0a8c0b91714079b67dae2142c0aa9ead05b566fe221ef28439b57a8f26103156",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/option.ts": {
+        "version": "9934f75cad30b94914cc0ffd7f1a66dd13ec64ab4fa83cec894564af679e04d5",
+        "signature": "3bc11142a406c69278ff4582a7a5ec49bc282d3e68af3dbfd311210022db21b6",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/inject.ts": {
+        "version": "2eb0d330ea5f8238c4b37536260a5508b56769b1132df7a5d0d4b715d38f314e",
+        "signature": "e8c83ee87d1f0d85109386a0e756670a5d5b007e016f9f473ad322027ece875e",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/index.ts": {
+        "version": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
+        "signature": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/index.ts": {
+        "version": "00a7a73ac95bb14783d77cd94e78708b7ced21b99990c12e4a603ddb52f71e1c",
+        "signature": "37841736104993750e9b90fa6c5f8eb53064f9ae1b38f44a6e98cd0149e20e53",
+        "affectsGlobalScope": false
+      },
       "../src/controller/metadata.ts": {
         "version": "b627e6945cbcbd9f4626e688dde886217857a16771142a37ae1ae510a39c71b7",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -219,6 +274,36 @@
       "../src/core/post.ts": {
         "version": "b4e59ad6cc1e44f61993fccd477ab7ce92d3bb4d62d0e32c2cdac30150941227",
         "signature": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
+        "affectsGlobalScope": false
+      },
+      "../src/http/client.ts": {
+        "version": "16a067a38cdb78f617391dd5a31f7afaa2d192f17a6b073e5f11a20a4740d58c",
+        "signature": "0c0bb73b7cddc6c0f4d69fea6bcd9a75b5d0093e9fe129019f3efb08de629d82",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/headers.ts": {
+        "version": "8ce7ebb14df05776d67977c7cd5ff07afab6a3ccc32c1b5f4eb66256a549211a",
+        "signature": "58e78a755791f7d7caf51232bbd3e00090a7abd70b5466420757725a5ad39c18",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/request.ts": {
+        "version": "1df2c1ef89370dd6a7746ea6888d73a748c4f929185212398a70b9a6be49575f",
+        "signature": "30408718172f1ddd38d68918afdf222e486c5b9fa5c5f82c18ce27e764ce9123",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/response.ts": {
+        "version": "ddfead23159de7d935b035eb1731b0737b9d614c1dad28155112777f609683d4",
+        "signature": "8796209a260f0c3eb665acbfe698fb3893b60099c718c02f26bc411bf899466d",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/index.ts": {
+        "version": "de153ce2bf9b04e513220fe9eaf00571eca9e0997f41f42bca46d1e6a40ceeea",
+        "signature": "de153ce2bf9b04e513220fe9eaf00571eca9e0997f41f42bca46d1e6a40ceeea",
+        "affectsGlobalScope": false
+      },
+      "../src/http/index.ts": {
+        "version": "fe8c32c0c653ddf12f7fd562ffa30efc8bcafa4800c03ec4cfaead2dbd88aa6f",
+        "signature": "fe8c32c0c653ddf12f7fd562ffa30efc8bcafa4800c03ec4cfaead2dbd88aa6f",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -470,6 +555,7 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
       "target": 4,
       "sourceMap": true,
       "outDir": "./",
@@ -653,6 +739,38 @@
       "../node_modules/@types/node/zlib.d.ts": [
         "../node_modules/@types/node/stream.d.ts"
       ],
+      "../src/cli/constants/index.ts": [
+        "../src/cli/constants/metadata.ts"
+      ],
+      "../src/cli/container.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/command.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/decorator/command.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/decorator/index.ts": [
+        "../src/cli/decorator/command.ts",
+        "../src/cli/decorator/inject.ts",
+        "../src/cli/decorator/option.ts"
+      ],
+      "../src/cli/decorator/inject.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/decorator/option.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/index.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/command.ts",
+        "../src/cli/constants/index.ts",
+        "../src/cli/container.ts",
+        "../src/cli/decorator/index.ts"
+      ],
       "../src/controller/home.ts": [
         "../src/core/index.ts"
       ],
@@ -660,8 +778,8 @@
         "../node_modules/reflect-metadata/index.d.ts"
       ],
       "../src/core/gateway.ts": [
-        "../node_modules/@types/node/querystring.d.ts",
-        "../node_modules/@types/node/url.d.ts"
+        "../node_modules/query-string/index.d.ts",
+        "../src/core/db.json"
       ],
       "../src/core/get.ts": [
         "../node_modules/reflect-metadata/index.d.ts",
@@ -681,6 +799,14 @@
         "../src/core/config.ts",
         "../src/core/gateway.ts",
         "../src/core/routedefinition.ts"
+      ],
+      "../src/http/http/index.ts": [
+        "../src/http/http/headers.ts",
+        "../src/http/http/request.ts",
+        "../src/http/http/response.ts"
+      ],
+      "../src/http/index.ts": [
+        "../src/http/http/index.ts"
       ],
       "../src/index.ts": [
         "../src/controller/home.ts",
@@ -863,6 +989,33 @@
       "../node_modules/@types/node/zlib.d.ts": [
         "../node_modules/@types/node/stream.d.ts"
       ],
+      "../src/cli/constants/index.ts": [
+        "../src/cli/constants/metadata.ts"
+      ],
+      "../src/cli/container.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/decorator/command.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/decorator/index.ts": [
+        "../src/cli/decorator/command.ts",
+        "../src/cli/decorator/inject.ts",
+        "../src/cli/decorator/option.ts"
+      ],
+      "../src/cli/decorator/inject.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/decorator/option.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/index.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/command.ts",
+        "../src/cli/constants/index.ts",
+        "../src/cli/container.ts",
+        "../src/cli/decorator/index.ts"
+      ],
       "../src/core/controller.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
@@ -879,6 +1032,14 @@
       ],
       "../src/core/run.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/http/http/index.ts": [
+        "../src/http/http/headers.ts",
+        "../src/http/http/request.ts",
+        "../src/http/http/response.ts"
+      ],
+      "../src/http/index.ts": [
+        "../src/http/http/index.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -930,6 +1091,7 @@
       "../node_modules/@types/node/wasi.d.ts",
       "../node_modules/@types/node/worker_threads.d.ts",
       "../node_modules/@types/node/zlib.d.ts",
+      "../node_modules/query-string/index.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
       "../node_modules/typescript/lib/lib.dom.d.ts",
       "../node_modules/typescript/lib/lib.dom.iterable.d.ts",
@@ -963,16 +1125,32 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "../src/cli/command.ts",
+      "../src/cli/constants/index.ts",
+      "../src/cli/constants/metadata.ts",
+      "../src/cli/container.ts",
+      "../src/cli/decorator/command.ts",
+      "../src/cli/decorator/index.ts",
+      "../src/cli/decorator/inject.ts",
+      "../src/cli/decorator/option.ts",
+      "../src/cli/index.ts",
       "../src/controller/home.ts",
       "../src/controller/metadata.ts",
       "../src/core/config.ts",
       "../src/core/controller.ts",
+      "../src/core/db.json",
       "../src/core/gateway.ts",
       "../src/core/get.ts",
       "../src/core/index.ts",
       "../src/core/post.ts",
       "../src/core/routedefinition.ts",
       "../src/core/run.ts",
+      "../src/http/client.ts",
+      "../src/http/http/headers.ts",
+      "../src/http/http/index.ts",
+      "../src/http/http/request.ts",
+      "../src/http/http/response.ts",
+      "../src/http/index.ts",
       "../src/index.ts"
     ]
   },

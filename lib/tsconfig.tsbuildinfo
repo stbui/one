@@ -166,6 +166,56 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
+      "../esm/cli/command.d.ts": {
+        "version": "a0d999777dbe65dbee130844bf17712c60a291fd3c8e540217d119334cda58e9",
+        "signature": "a0d999777dbe65dbee130844bf17712c60a291fd3c8e540217d119334cda58e9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/reflect-metadata/index.d.ts": {
+        "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
+        "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
+        "affectsGlobalScope": true
+      },
+      "../esm/cli/container.d.ts": {
+        "version": "8aa89c9301af30f3902a098ee7b08618ff56565fe386d7cfdfbbabb3867c4b2a",
+        "signature": "8aa89c9301af30f3902a098ee7b08618ff56565fe386d7cfdfbbabb3867c4b2a",
+        "affectsGlobalScope": false
+      },
+      "../esm/cli/constants/metadata.d.ts": {
+        "version": "1c476b694a418c116334fc8943a26314b010362ecb4677dad733ef80c0b1ab90",
+        "signature": "1c476b694a418c116334fc8943a26314b010362ecb4677dad733ef80c0b1ab90",
+        "affectsGlobalScope": false
+      },
+      "../esm/cli/constants/index.d.ts": {
+        "version": "b667aa8bca0287600b70e06a9c0a4a9555d662c519ff736f2156b1dd2fd69307",
+        "signature": "b667aa8bca0287600b70e06a9c0a4a9555d662c519ff736f2156b1dd2fd69307",
+        "affectsGlobalScope": false
+      },
+      "../esm/cli/decorator/command.d.ts": {
+        "version": "0a8c0b91714079b67dae2142c0aa9ead05b566fe221ef28439b57a8f26103156",
+        "signature": "0a8c0b91714079b67dae2142c0aa9ead05b566fe221ef28439b57a8f26103156",
+        "affectsGlobalScope": false
+      },
+      "../esm/cli/decorator/option.d.ts": {
+        "version": "3bc11142a406c69278ff4582a7a5ec49bc282d3e68af3dbfd311210022db21b6",
+        "signature": "3bc11142a406c69278ff4582a7a5ec49bc282d3e68af3dbfd311210022db21b6",
+        "affectsGlobalScope": false
+      },
+      "../esm/cli/decorator/inject.d.ts": {
+        "version": "e8c83ee87d1f0d85109386a0e756670a5d5b007e016f9f473ad322027ece875e",
+        "signature": "e8c83ee87d1f0d85109386a0e756670a5d5b007e016f9f473ad322027ece875e",
+        "affectsGlobalScope": false
+      },
+      "../esm/cli/decorator/index.d.ts": {
+        "version": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
+        "signature": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
+        "affectsGlobalScope": false
+      },
+      "../esm/cli/index.d.ts": {
+        "version": "37841736104993750e9b90fa6c5f8eb53064f9ae1b38f44a6e98cd0149e20e53",
+        "signature": "37841736104993750e9b90fa6c5f8eb53064f9ae1b38f44a6e98cd0149e20e53",
+        "affectsGlobalScope": false
+      },
       "../esm/controller/home.d.ts": {
         "version": "3fcac82cfd1f8ffb25bbc69ddbfee6bfb9349b3a7161e44fdd30f5656819f1b3",
         "signature": "3fcac82cfd1f8ffb25bbc69ddbfee6bfb9349b3a7161e44fdd30f5656819f1b3",
@@ -175,11 +225,6 @@
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
-      },
-      "../node_modules/reflect-metadata/index.d.ts": {
-        "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
-        "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
-        "affectsGlobalScope": true
       },
       "../esm/core/controller.d.ts": {
         "version": "4292dc191f6e6916566c1f1a26afd363ddddf2fd29c70062420b146606b11f8a",
@@ -276,6 +321,51 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
+      "../src/cli/command.ts": {
+        "version": "61efc2cb5921daf7dfa9de8c600d429c3fcd9ff9326ab383dc309cc241e46d16",
+        "signature": "a0d999777dbe65dbee130844bf17712c60a291fd3c8e540217d119334cda58e9",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/constants/metadata.ts": {
+        "version": "ebb4a92490af192ae18a2ac7235648f67347d3c5c126ee06bf524578e7d8ec43",
+        "signature": "1c476b694a418c116334fc8943a26314b010362ecb4677dad733ef80c0b1ab90",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/constants/index.ts": {
+        "version": "b667aa8bca0287600b70e06a9c0a4a9555d662c519ff736f2156b1dd2fd69307",
+        "signature": "b667aa8bca0287600b70e06a9c0a4a9555d662c519ff736f2156b1dd2fd69307",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/container.ts": {
+        "version": "3f9b54119bd643a5db185b94b1b68d9d2316fb38030fb4bed0a0ce2b86c90a97",
+        "signature": "8aa89c9301af30f3902a098ee7b08618ff56565fe386d7cfdfbbabb3867c4b2a",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/command.ts": {
+        "version": "98123ad52612400c48f1e768660d7d1f3553fe5a714c3eb2946768d4b23a00a2",
+        "signature": "0a8c0b91714079b67dae2142c0aa9ead05b566fe221ef28439b57a8f26103156",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/option.ts": {
+        "version": "9934f75cad30b94914cc0ffd7f1a66dd13ec64ab4fa83cec894564af679e04d5",
+        "signature": "3bc11142a406c69278ff4582a7a5ec49bc282d3e68af3dbfd311210022db21b6",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/inject.ts": {
+        "version": "2eb0d330ea5f8238c4b37536260a5508b56769b1132df7a5d0d4b715d38f314e",
+        "signature": "e8c83ee87d1f0d85109386a0e756670a5d5b007e016f9f473ad322027ece875e",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/decorator/index.ts": {
+        "version": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
+        "signature": "9fa00920d38e83ad7caa47019c43ff7650f076546302e43fe975a85f6dd066a7",
+        "affectsGlobalScope": false
+      },
+      "../src/cli/index.ts": {
+        "version": "00a7a73ac95bb14783d77cd94e78708b7ced21b99990c12e4a603ddb52f71e1c",
+        "signature": "37841736104993750e9b90fa6c5f8eb53064f9ae1b38f44a6e98cd0149e20e53",
+        "affectsGlobalScope": false
+      },
       "../src/controller/metadata.ts": {
         "version": "b627e6945cbcbd9f4626e688dde886217857a16771142a37ae1ae510a39c71b7",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -284,6 +374,36 @@
       "../src/core/post.ts": {
         "version": "b4e59ad6cc1e44f61993fccd477ab7ce92d3bb4d62d0e32c2cdac30150941227",
         "signature": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
+        "affectsGlobalScope": false
+      },
+      "../src/http/client.ts": {
+        "version": "16a067a38cdb78f617391dd5a31f7afaa2d192f17a6b073e5f11a20a4740d58c",
+        "signature": "0c0bb73b7cddc6c0f4d69fea6bcd9a75b5d0093e9fe129019f3efb08de629d82",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/headers.ts": {
+        "version": "8ce7ebb14df05776d67977c7cd5ff07afab6a3ccc32c1b5f4eb66256a549211a",
+        "signature": "58e78a755791f7d7caf51232bbd3e00090a7abd70b5466420757725a5ad39c18",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/request.ts": {
+        "version": "1df2c1ef89370dd6a7746ea6888d73a748c4f929185212398a70b9a6be49575f",
+        "signature": "30408718172f1ddd38d68918afdf222e486c5b9fa5c5f82c18ce27e764ce9123",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/response.ts": {
+        "version": "ddfead23159de7d935b035eb1731b0737b9d614c1dad28155112777f609683d4",
+        "signature": "8796209a260f0c3eb665acbfe698fb3893b60099c718c02f26bc411bf899466d",
+        "affectsGlobalScope": false
+      },
+      "../src/http/http/index.ts": {
+        "version": "de153ce2bf9b04e513220fe9eaf00571eca9e0997f41f42bca46d1e6a40ceeea",
+        "signature": "de153ce2bf9b04e513220fe9eaf00571eca9e0997f41f42bca46d1e6a40ceeea",
+        "affectsGlobalScope": false
+      },
+      "../src/http/index.ts": {
+        "version": "fe8c32c0c653ddf12f7fd562ffa30efc8bcafa4800c03ec4cfaead2dbd88aa6f",
+        "signature": "fe8c32c0c653ddf12f7fd562ffa30efc8bcafa4800c03ec4cfaead2dbd88aa6f",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -541,10 +661,36 @@
       "outDir": "./",
       "baseUrl": "..",
       "incremental": true,
-      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
+      "../esm/cli/constants/index.d.ts": [
+        "../esm/cli/constants/metadata.d.ts"
+      ],
+      "../esm/cli/container.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/decorator/command.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/decorator/index.d.ts": [
+        "../esm/cli/decorator/command.d.ts",
+        "../esm/cli/decorator/inject.d.ts",
+        "../esm/cli/decorator/option.d.ts"
+      ],
+      "../esm/cli/decorator/inject.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/decorator/option.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/index.d.ts": [
+        "../esm/cli/command.d.ts",
+        "../esm/cli/constants/index.d.ts",
+        "../esm/cli/container.d.ts",
+        "../esm/cli/decorator/index.d.ts",
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
       "../esm/core/controller.d.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
@@ -736,6 +882,38 @@
       ],
       "../node_modules/@types/node/zlib.d.ts": [
         "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../src/cli/constants/index.ts": [
+        "../src/cli/constants/metadata.ts"
+      ],
+      "../src/cli/container.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/command.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/decorator/command.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/decorator/index.ts": [
+        "../src/cli/decorator/command.ts",
+        "../src/cli/decorator/inject.ts",
+        "../src/cli/decorator/option.ts"
+      ],
+      "../src/cli/decorator/inject.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/decorator/option.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/constants/index.ts"
+      ],
+      "../src/cli/index.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/command.ts",
+        "../src/cli/constants/index.ts",
+        "../src/cli/container.ts",
+        "../src/cli/decorator/index.ts"
       ],
       "../src/controller/home.ts": [
         "../src/core/index.ts"
@@ -766,12 +944,47 @@
         "../src/core/gateway.ts",
         "../src/core/routedefinition.ts"
       ],
+      "../src/http/http/index.ts": [
+        "../src/http/http/headers.ts",
+        "../src/http/http/request.ts",
+        "../src/http/http/response.ts"
+      ],
+      "../src/http/index.ts": [
+        "../src/http/http/index.ts"
+      ],
       "../src/index.ts": [
         "../src/controller/home.ts",
         "../src/core/index.ts"
       ]
     },
     "exportedModulesMap": {
+      "../esm/cli/constants/index.d.ts": [
+        "../esm/cli/constants/metadata.d.ts"
+      ],
+      "../esm/cli/container.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/decorator/command.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/decorator/index.d.ts": [
+        "../esm/cli/decorator/command.d.ts",
+        "../esm/cli/decorator/inject.d.ts",
+        "../esm/cli/decorator/option.d.ts"
+      ],
+      "../esm/cli/decorator/inject.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/decorator/option.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/cli/index.d.ts": [
+        "../esm/cli/command.d.ts",
+        "../esm/cli/constants/index.d.ts",
+        "../esm/cli/container.d.ts",
+        "../esm/cli/decorator/index.d.ts",
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
       "../esm/core/controller.d.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
@@ -964,6 +1177,33 @@
       "../node_modules/@types/node/zlib.d.ts": [
         "../node_modules/@types/node/stream.d.ts"
       ],
+      "../src/cli/constants/index.ts": [
+        "../src/cli/constants/metadata.ts"
+      ],
+      "../src/cli/container.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/decorator/command.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/decorator/index.ts": [
+        "../src/cli/decorator/command.ts",
+        "../src/cli/decorator/inject.ts",
+        "../src/cli/decorator/option.ts"
+      ],
+      "../src/cli/decorator/inject.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/decorator/option.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/cli/index.ts": [
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/cli/command.ts",
+        "../src/cli/constants/index.ts",
+        "../src/cli/container.ts",
+        "../src/cli/decorator/index.ts"
+      ],
       "../src/core/controller.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
@@ -980,9 +1220,26 @@
       ],
       "../src/core/run.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/http/http/index.ts": [
+        "../src/http/http/headers.ts",
+        "../src/http/http/request.ts",
+        "../src/http/http/response.ts"
+      ],
+      "../src/http/index.ts": [
+        "../src/http/http/index.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../esm/cli/command.d.ts",
+      "../esm/cli/constants/index.d.ts",
+      "../esm/cli/constants/metadata.d.ts",
+      "../esm/cli/container.d.ts",
+      "../esm/cli/decorator/command.d.ts",
+      "../esm/cli/decorator/index.d.ts",
+      "../esm/cli/decorator/inject.d.ts",
+      "../esm/cli/decorator/option.d.ts",
+      "../esm/cli/index.d.ts",
       "../esm/controller/home.d.ts",
       "../esm/controller/metadata.d.ts",
       "../esm/core/config.d.ts",
@@ -1076,6 +1333,15 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "../src/cli/command.ts",
+      "../src/cli/constants/index.ts",
+      "../src/cli/constants/metadata.ts",
+      "../src/cli/container.ts",
+      "../src/cli/decorator/command.ts",
+      "../src/cli/decorator/index.ts",
+      "../src/cli/decorator/inject.ts",
+      "../src/cli/decorator/option.ts",
+      "../src/cli/index.ts",
       "../src/controller/home.ts",
       "../src/controller/metadata.ts",
       "../src/core/config.ts",
@@ -1087,6 +1353,12 @@
       "../src/core/post.ts",
       "../src/core/routedefinition.ts",
       "../src/core/run.ts",
+      "../src/http/client.ts",
+      "../src/http/http/headers.ts",
+      "../src/http/http/index.ts",
+      "../src/http/http/request.ts",
+      "../src/http/http/response.ts",
+      "../src/http/index.ts",
       "../src/index.ts"
     ]
   },

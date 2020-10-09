@@ -1,38 +1,34 @@
-import url from "url";
-import request from "request";
-import querystring from "querystring";
-import * as lowdb from "lowdb";
-import * as FileSync from "lowdb/adapters/FileSync";
-const adapter = new FileSync("./db.json");
-const db = lowdb(adapter);
+import * as request from "request";
+import { stringify } from "query-string";
+import { api } from "./db.json";
 export function G(app) {
-    const apis = db.get("api").value();
-    apis.map((api) => {
+    api.map((api) => {
         const requestMethod = api.requestConfig.method.toLowerCase();
         app[requestMethod](api.requestConfig.path, (req, res) => {
-            var u = url.parse(req.url);
-            let query = querystring.parse(u.query);
-            let newQuery = querystring.parse(u.query);
-            api.serviceParameters.map((param) => {
-                const value = query[param.relevantRequestParameterName];
-                if (value) {
-                    newQuery[param.name] = query[param.relevantRequestParameterName];
-                    delete newQuery[param.relevantRequestParameterName];
-                }
-            });
-            newQuery = Object.keys(newQuery).length
-                ? "?" + querystring.stringify(newQuery)
-                : "";
-            console.log(`http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`);
-            request({
-                url: `http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`,
-                method: api.serviceConfig.method,
-                body: JSON.stringify(req.body),
-                headers: {
-                    cookie: req.get("cookie"),
-                    "Content-Type": "application/json",
-                },
-            }).pipe(res);
+            if (requestMethod === "get") {
+                const query = req.query;
+                const aa = {};
+                api.requestParameters
+                    .filter((p) => query[p.name])
+                    .map((p) => {
+                    aa[p.name] = query[p.name];
+                });
+                const bb = {};
+                api.serviceParameters.forEach((p) => {
+                    bb[p.name] = aa[p.relevantRequestParameterName];
+                });
+                const newQuery = "?" + stringify(bb);
+                const url = `http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`;
+                console.log(url);
+                request({
+                    url,
+                    method: api.serviceConfig.method,
+                    headers: {
+                        cookie: req.get("cookie"),
+                        "Content-Type": "application/json",
+                    },
+                }).pipe(res);
+            }
         });
     });
 }
