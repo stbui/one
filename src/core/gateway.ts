@@ -1,4 +1,5 @@
 import * as request from "request";
+import { stringify } from "query-string";
 
 import { api } from "./db.json";
 
@@ -7,32 +8,29 @@ export function G(app) {
     const requestMethod = api.requestConfig.method.toLowerCase();
 
     app[requestMethod](api.requestConfig.path, (req, res) => {
-      // console.log(1, req.protocol, req.hostname, req.url);
-      // const u = url.parse(req.url);
-
-      // let query = querystring.parse(u.query);
-      // let newQuery: any = querystring.parse(u.query);
-
-      // api.serviceParameters.map((param) => {
-      //   const value = query[param.relevantRequestParameterName];
-      //   if (value) {
-      //     newQuery[param.name] = query[param.relevantRequestParameterName];
-      //     delete newQuery[param.relevantRequestParameterName];
-      //   }
-      // });
-
-      // newQuery = Object.keys(newQuery).length
-      //   ? "?" + querystring.stringify(newQuery)
-      //   : "";
-
       if (requestMethod === "get") {
-        const newQuery = "?";
+        const query = req.query;
 
-        console.log(
-          `http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`
-        );
+        const aa = {};
+        api.requestParameters
+          .filter((p) => query[p.name])
+          .map((p) => {
+            aa[p.name] = query[p.name];
+          });
+
+        const bb = {};
+        api.serviceParameters.forEach((p) => {
+          bb[p.name] = aa[p.relevantRequestParameterName];
+        });
+
+        const newQuery = "?" + stringify(bb);
+
+        const url = `http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`;
+
+        console.log(url);
+
         request({
-          url: `http://${api.serviceConfig.url}${api.serviceConfig.path}${newQuery}`,
+          url,
           method: api.serviceConfig.method,
           headers: {
             cookie: req.get("cookie"),

@@ -15,7 +15,15 @@
             },
             "requestParameters": [
                 {
-                    "name": "usename",
+                    "name": "currentPage",
+                    "in": "QUERY",
+                    "type": "String",
+                    "defaultValue": "",
+                    "required": "True",
+                    "desc": "用户名称"
+                },
+                {
+                    "name": "pageSize",
                     "in": "QUERY",
                     "type": "String",
                     "defaultValue": "",
@@ -27,32 +35,24 @@
             "serviceTimeout": 60,
             "serviceConfig": {
                 "url": "seraph-metadata.test.za-tech.net",
-                "path": "/v1/appInfo/getGranOrgsByProposer",
+                "path": "/v1/app/getMyApprovedApp",
                 "method": "GET"
             },
             "serviceParameters": [
                 {
-                    "name": "proposer",
+                    "name": "currentPage",
                     "in": "QUERY",
-                    "relevantRequestParameterName": "usename",
+                    "relevantRequestParameterName": "currentPage",
                     "relevantRequestParameterIn": "QUERY",
                     "defaultValue": "",
                     "desc": "用户名称"
                 },
                 {
-                    "name": "currentPage",
-                    "in": "QUERY",
-                    "relevantRequestParameterName": "page",
-                    "relevantRequestParameterIn": "QUERY",
-                    "defaultValue": "1",
-                    "desc": ""
-                },
-                {
                     "name": "pageSize",
                     "in": "QUERY",
-                    "relevantRequestParameterName": "perPage",
+                    "relevantRequestParameterName": "pageSize",
                     "relevantRequestParameterIn": "QUERY",
-                    "defaultValue": "10",
+                    "defaultValue": "1",
                     "desc": ""
                 }
             ],
@@ -167,6 +167,64 @@
                     "name": "loginName",
                     "in": "QUERY",
                     "relevantRequestParameterName": "username",
+                    "relevantRequestParameterIn": "QUERY",
+                    "defaultValue": "",
+                    "desc": ""
+                }
+            ],
+            "constantParameters": [
+                {
+                    "name": "name",
+                    "desc": "desc",
+                    "position": "position",
+                    "defaultValue": "defaultValue"
+                }
+            ],
+            "responseType": "JSON"
+        },
+        {
+            "requestConfig": {
+                "path": "/appInfo/getGranOrgsByProposer",
+                "method": "GET"
+            },
+            "requestParameters": [
+                {
+                    "name": "companyId",
+                    "in": "QUERY",
+                    "type": "String",
+                    "defaultValue": "",
+                    "required": "True",
+                    "desc": "用户名称"
+                },
+                {
+                    "name": "proposer",
+                    "in": "QUERY",
+                    "type": "String",
+                    "defaultValue": "",
+                    "required": "True",
+                    "desc": "用户名称"
+                }
+            ],
+            "serviceType": "HTTP",
+            "serviceTimeout": 60,
+            "serviceConfig": {
+                "url": "seraph-metadata.test.za-tech.net",
+                "path": "/v1/appInfo/getGranOrgsByProposer",
+                "method": "GET"
+            },
+            "serviceParameters": [
+                {
+                    "name": "proposer",
+                    "in": "QUERY",
+                    "relevantRequestParameterName": "proposer",
+                    "relevantRequestParameterIn": "QUERY",
+                    "defaultValue": "",
+                    "desc": ""
+                },
+                {
+                    "name": "companyId",
+                    "in": "QUERY",
+                    "relevantRequestParameterName": "companyId",
                     "relevantRequestParameterIn": "QUERY",
                     "defaultValue": "",
                     "desc": ""
