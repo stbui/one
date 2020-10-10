@@ -161,6 +161,11 @@
         "signature": "d2f31f19e1ba6ed59be9259d660a239d9a3fcbbc8e038c6b2009bde34b175fed",
         "affectsGlobalScope": false
       },
+      "../esm/config.d.ts": {
+        "version": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
+        "signature": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
+        "affectsGlobalScope": false
+      },
       "../esm/index.d.ts": {
         "version": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
@@ -221,14 +226,29 @@
         "signature": "eb409a0135e25f7e08f4f2c47b449e5de44d046b7547171c1d18a08f7e655621",
         "affectsGlobalScope": false
       },
-      "../esm/controller/home.d.ts": {
-        "version": "3fcac82cfd1f8ffb25bbc69ddbfee6bfb9349b3a7161e44fdd30f5656819f1b3",
-        "signature": "3fcac82cfd1f8ffb25bbc69ddbfee6bfb9349b3a7161e44fdd30f5656819f1b3",
+      "../esm/controller/app.d.ts": {
+        "version": "211aa40745191c33c6d69cb17f513944d5a8ec0b36d4939b6be269e47eb86061",
+        "signature": "211aa40745191c33c6d69cb17f513944d5a8ec0b36d4939b6be269e47eb86061",
         "affectsGlobalScope": false
       },
-      "../esm/controller/metadata.d.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "../esm/controller/home.d.ts": {
+        "version": "dab93e37e8f2f1a180ee5c5046fb46887025964d9324dfe3b6f6215476abeb3c",
+        "signature": "dab93e37e8f2f1a180ee5c5046fb46887025964d9324dfe3b6f6215476abeb3c",
+        "affectsGlobalScope": false
+      },
+      "../esm/controller/custom/available.d.ts": {
+        "version": "96040b85b983e9053042f9bb66766434e66c02bd282187524ec2c173e77876fa",
+        "signature": "96040b85b983e9053042f9bb66766434e66c02bd282187524ec2c173e77876fa",
+        "affectsGlobalScope": false
+      },
+      "../esm/controller/custom/monitor.d.ts": {
+        "version": "3b05fbb666d0d245e895885323f0239401a0034a601ccc258bc77f377786b61d",
+        "signature": "3b05fbb666d0d245e895885323f0239401a0034a601ccc258bc77f377786b61d",
+        "affectsGlobalScope": false
+      },
+      "../esm/controller/custom/index.d.ts": {
+        "version": "9c18f1c93ce49522f9a09583fd77c9a3f1801e911d216a9f968d57b6cf1f50ed",
+        "signature": "9c18f1c93ce49522f9a09583fd77c9a3f1801e911d216a9f968d57b6cf1f50ed",
         "affectsGlobalScope": false
       },
       "../esm/core/controller.d.ts": {
@@ -242,18 +262,18 @@
         "affectsGlobalScope": false
       },
       "../esm/core/post.d.ts": {
-        "version": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
-        "signature": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
+        "version": "95b6abdf568e6946bc0ae54b3d15d6e018b881456a479f2b4fbe9c0e6d76ebac",
+        "signature": "95b6abdf568e6946bc0ae54b3d15d6e018b881456a479f2b4fbe9c0e6d76ebac",
+        "affectsGlobalScope": false
+      },
+      "../esm/core/proxy.d.ts": {
+        "version": "47e5602ec1752bac97898ba660f9f804463b89532903f3b93218f477fa10fbce",
+        "signature": "47e5602ec1752bac97898ba660f9f804463b89532903f3b93218f477fa10fbce",
         "affectsGlobalScope": false
       },
       "../esm/core/routedefinition.d.ts": {
         "version": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
         "signature": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
-        "affectsGlobalScope": false
-      },
-      "../esm/core/config.d.ts": {
-        "version": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
-        "signature": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
         "affectsGlobalScope": false
       },
       "../esm/core/gateway.d.ts": {
@@ -262,13 +282,13 @@
         "affectsGlobalScope": false
       },
       "../esm/core/run.d.ts": {
-        "version": "fb51481d0975ab7dae7039003db8a1dad48489d86bc07439f2f917b7825b3a6d",
-        "signature": "fb51481d0975ab7dae7039003db8a1dad48489d86bc07439f2f917b7825b3a6d",
+        "version": "de70a50e266cb6bcf06a5f581808a81e38a5446fae067e08ca80fce2a87047cc",
+        "signature": "de70a50e266cb6bcf06a5f581808a81e38a5446fae067e08ca80fce2a87047cc",
         "affectsGlobalScope": false
       },
       "../esm/core/index.d.ts": {
-        "version": "155c31b3d96fad8a1edf684d6933f8d4b85d3fd437681571f98ffb3b518025ab",
-        "signature": "155c31b3d96fad8a1edf684d6933f8d4b85d3fd437681571f98ffb3b518025ab",
+        "version": "9961a9e0afbe537a50680be87b489293eaf2de1561cc884034a90ec6e9713dfb",
+        "signature": "9961a9e0afbe537a50680be87b489293eaf2de1561cc884034a90ec6e9713dfb",
         "affectsGlobalScope": false
       },
       "../esm/http/client.d.ts": {
@@ -301,14 +321,14 @@
         "signature": "fe8c32c0c653ddf12f7fd562ffa30efc8bcafa4800c03ec4cfaead2dbd88aa6f",
         "affectsGlobalScope": false
       },
+      "../src/config.ts": {
+        "version": "416ca091644260bade319216f4b8e251eaea01cffc4e45f8f1dda3afbfe4082a",
+        "signature": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
+        "affectsGlobalScope": false
+      },
       "../src/core/routedefinition.ts": {
         "version": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
         "signature": "f309e24a9b8e304038e139511d0226c85255a2847cc8957818d2987e6a0bcb3f",
-        "affectsGlobalScope": false
-      },
-      "../src/core/config.ts": {
-        "version": "416ca091644260bade319216f4b8e251eaea01cffc4e45f8f1dda3afbfe4082a",
-        "signature": "74dfabb0b995a6c5a70b70b72d05a18caf974f83bc56e94f39bdd4bf72ab95dc",
         "affectsGlobalScope": false
       },
       "../node_modules/query-string/index.d.ts": {
@@ -327,8 +347,8 @@
         "affectsGlobalScope": false
       },
       "../src/core/run.ts": {
-        "version": "763d57a31a44c50908b2bde68b379edb611231b2cef82a7b23c4bdf2831a245c",
-        "signature": "fb51481d0975ab7dae7039003db8a1dad48489d86bc07439f2f917b7825b3a6d",
+        "version": "94486e815fdd38a10fb063a72056a567dfc57aa26462d1dcd8f4cbc9b1254821",
+        "signature": "de70a50e266cb6bcf06a5f581808a81e38a5446fae067e08ca80fce2a87047cc",
         "affectsGlobalScope": false
       },
       "../src/core/controller.ts": {
@@ -341,18 +361,48 @@
         "signature": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
         "affectsGlobalScope": false
       },
+      "../src/core/post.ts": {
+        "version": "ee44aa9a8f77251d44deb08dcf64812ce0d487657f9ebf22977469d51512e3ca",
+        "signature": "95b6abdf568e6946bc0ae54b3d15d6e018b881456a479f2b4fbe9c0e6d76ebac",
+        "affectsGlobalScope": false
+      },
+      "../src/core/proxy.ts": {
+        "version": "fb3e3d01b7ce2c30c8b7998b88ca17f57214c5e7e74296db530043f2406a026e",
+        "signature": "47e5602ec1752bac97898ba660f9f804463b89532903f3b93218f477fa10fbce",
+        "affectsGlobalScope": false
+      },
       "../src/core/index.ts": {
-        "version": "155c31b3d96fad8a1edf684d6933f8d4b85d3fd437681571f98ffb3b518025ab",
-        "signature": "155c31b3d96fad8a1edf684d6933f8d4b85d3fd437681571f98ffb3b518025ab",
+        "version": "9961a9e0afbe537a50680be87b489293eaf2de1561cc884034a90ec6e9713dfb",
+        "signature": "9961a9e0afbe537a50680be87b489293eaf2de1561cc884034a90ec6e9713dfb",
+        "affectsGlobalScope": false
+      },
+      "../src/controller/app.ts": {
+        "version": "2c8f0df6e0b242d767b04127b849dfacebfdad61240c558229634d7e4ced6b37",
+        "signature": "211aa40745191c33c6d69cb17f513944d5a8ec0b36d4939b6be269e47eb86061",
         "affectsGlobalScope": false
       },
       "../src/controller/home.ts": {
-        "version": "a88ef27338332901812165b777098a9c8649b261b3435c02b0156da96a718125",
-        "signature": "3fcac82cfd1f8ffb25bbc69ddbfee6bfb9349b3a7161e44fdd30f5656819f1b3",
+        "version": "2d0e6c533dea074c28f0e61de36b7d0689232e49e5b8f482db2130ccc4918dc4",
+        "signature": "dab93e37e8f2f1a180ee5c5046fb46887025964d9324dfe3b6f6215476abeb3c",
+        "affectsGlobalScope": false
+      },
+      "../src/controller/custom/available.ts": {
+        "version": "c91dcf19b8a033963c24724a0d9921d53b22de9a203f59c4d61dd2807ee13277",
+        "signature": "96040b85b983e9053042f9bb66766434e66c02bd282187524ec2c173e77876fa",
+        "affectsGlobalScope": false
+      },
+      "../src/controller/custom/monitor.ts": {
+        "version": "7e8b4d4324eb162c4f47e82ba17119352b63cb6ab4ec927c155630024e2bc440",
+        "signature": "3b05fbb666d0d245e895885323f0239401a0034a601ccc258bc77f377786b61d",
+        "affectsGlobalScope": false
+      },
+      "../src/controller/custom/index.ts": {
+        "version": "9c18f1c93ce49522f9a09583fd77c9a3f1801e911d216a9f968d57b6cf1f50ed",
+        "signature": "9c18f1c93ce49522f9a09583fd77c9a3f1801e911d216a9f968d57b6cf1f50ed",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "65f6cab509feec1098d0464e378b50a294d6fd8822046cb2b0bb01bf7fb4afee",
+        "version": "a88ab9c0f44fbf52fae0bfd62e322a8faef7c8e74751cea990f6733a14d706ea",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -404,16 +454,6 @@
       "../src/cli/index.ts": {
         "version": "7d0f9a170ebcfbf11a6bcddff8e0363e5387ddcd8da4d247b82f7999b6342932",
         "signature": "eb409a0135e25f7e08f4f2c47b449e5de44d046b7547171c1d18a08f7e655621",
-        "affectsGlobalScope": false
-      },
-      "../src/controller/metadata.ts": {
-        "version": "b627e6945cbcbd9f4626e688dde886217857a16771142a37ae1ae510a39c71b7",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/core/post.ts": {
-        "version": "b4e59ad6cc1e44f61993fccd477ab7ce92d3bb4d62d0e32c2cdac30150941227",
-        "signature": "dba269e8a36cf83281b057f2c1ef214263b2e159be8a101f57483b6a9f99d0a8",
         "affectsGlobalScope": false
       },
       "../src/http/client.ts": {
@@ -736,6 +776,10 @@
         "../esm/cli/decorator/index.d.ts",
         "../node_modules/reflect-metadata/index.d.ts"
       ],
+      "../esm/controller/custom/index.d.ts": [
+        "../esm/controller/custom/available.d.ts",
+        "../esm/controller/custom/monitor.d.ts"
+      ],
       "../esm/core/controller.d.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
@@ -745,9 +789,14 @@
       "../esm/core/index.d.ts": [
         "../esm/core/controller.d.ts",
         "../esm/core/get.d.ts",
+        "../esm/core/post.d.ts",
+        "../esm/core/proxy.d.ts",
         "../esm/core/run.d.ts"
       ],
       "../esm/core/post.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/core/proxy.d.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
       "../esm/core/run.d.ts": [
@@ -973,6 +1022,19 @@
         "../src/cli/container.ts",
         "../src/cli/decorator/index.ts"
       ],
+      "../src/controller/app.ts": [
+        "../src/core/index.ts"
+      ],
+      "../src/controller/custom/available.ts": [
+        "../src/core/index.ts"
+      ],
+      "../src/controller/custom/index.ts": [
+        "../src/controller/custom/available.ts",
+        "../src/controller/custom/monitor.ts"
+      ],
+      "../src/controller/custom/monitor.ts": [
+        "../src/core/index.ts"
+      ],
       "../src/controller/home.ts": [
         "../src/core/index.ts"
       ],
@@ -990,15 +1052,22 @@
       "../src/core/index.ts": [
         "../src/core/controller.ts",
         "../src/core/get.ts",
+        "../src/core/post.ts",
+        "../src/core/proxy.ts",
         "../src/core/run.ts"
       ],
       "../src/core/post.ts": [
         "../node_modules/reflect-metadata/index.d.ts",
         "../src/core/routedefinition.ts"
       ],
+      "../src/core/proxy.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/reflect-metadata/index.d.ts",
+        "../src/core/routedefinition.ts"
+      ],
       "../src/core/run.ts": [
         "../node_modules/reflect-metadata/index.d.ts",
-        "../src/core/config.ts",
         "../src/core/gateway.ts",
         "../src/core/routedefinition.ts"
       ],
@@ -1011,6 +1080,9 @@
         "../src/http/http/index.ts"
       ],
       "../src/index.ts": [
+        "../src/config.ts",
+        "../src/controller/app.ts",
+        "../src/controller/custom/index.ts",
         "../src/controller/home.ts",
         "../src/core/index.ts"
       ]
@@ -1047,6 +1119,10 @@
         "../esm/cli/decorator/index.d.ts",
         "../node_modules/reflect-metadata/index.d.ts"
       ],
+      "../esm/controller/custom/index.d.ts": [
+        "../esm/controller/custom/available.d.ts",
+        "../esm/controller/custom/monitor.d.ts"
+      ],
       "../esm/core/controller.d.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
@@ -1056,9 +1132,14 @@
       "../esm/core/index.d.ts": [
         "../esm/core/controller.d.ts",
         "../esm/core/get.d.ts",
+        "../esm/core/post.d.ts",
+        "../esm/core/proxy.d.ts",
         "../esm/core/run.d.ts"
       ],
       "../esm/core/post.d.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../esm/core/proxy.d.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
       "../esm/core/run.d.ts": [
@@ -1278,6 +1359,10 @@
         "../src/cli/container.ts",
         "../src/cli/decorator/index.ts"
       ],
+      "../src/controller/custom/index.ts": [
+        "../src/controller/custom/available.ts",
+        "../src/controller/custom/monitor.ts"
+      ],
       "../src/core/controller.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
@@ -1287,9 +1372,14 @@
       "../src/core/index.ts": [
         "../src/core/controller.ts",
         "../src/core/get.ts",
+        "../src/core/post.ts",
+        "../src/core/proxy.ts",
         "../src/core/run.ts"
       ],
       "../src/core/post.ts": [
+        "../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../src/core/proxy.ts": [
         "../node_modules/reflect-metadata/index.d.ts"
       ],
       "../src/core/run.ts": [
@@ -1315,14 +1405,18 @@
       "../esm/cli/decorator/inject.d.ts",
       "../esm/cli/decorator/option.d.ts",
       "../esm/cli/index.d.ts",
+      "../esm/config.d.ts",
+      "../esm/controller/app.d.ts",
+      "../esm/controller/custom/available.d.ts",
+      "../esm/controller/custom/index.d.ts",
+      "../esm/controller/custom/monitor.d.ts",
       "../esm/controller/home.d.ts",
-      "../esm/controller/metadata.d.ts",
-      "../esm/core/config.d.ts",
       "../esm/core/controller.d.ts",
       "../esm/core/gateway.d.ts",
       "../esm/core/get.d.ts",
       "../esm/core/index.d.ts",
       "../esm/core/post.d.ts",
+      "../esm/core/proxy.d.ts",
       "../esm/core/routedefinition.d.ts",
       "../esm/core/run.d.ts",
       "../esm/http/client.d.ts",
@@ -1424,15 +1518,19 @@
       "../src/cli/decorator/inject.ts",
       "../src/cli/decorator/option.ts",
       "../src/cli/index.ts",
+      "../src/config.ts",
+      "../src/controller/app.ts",
+      "../src/controller/custom/available.ts",
+      "../src/controller/custom/index.ts",
+      "../src/controller/custom/monitor.ts",
       "../src/controller/home.ts",
-      "../src/controller/metadata.ts",
-      "../src/core/config.ts",
       "../src/core/controller.ts",
       "../src/core/db.json",
       "../src/core/gateway.ts",
       "../src/core/get.ts",
       "../src/core/index.ts",
       "../src/core/post.ts",
+      "../src/core/proxy.ts",
       "../src/core/routedefinition.ts",
       "../src/core/run.ts",
       "../src/http/client.ts",

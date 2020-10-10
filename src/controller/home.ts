@@ -1,12 +1,12 @@
-import { Controller, Get } from '../core';
+import { Controller, Get } from "../core";
 
-@Controller('/home')
+@Controller("/home")
 export class Home {
-    constructor() {}
+  constructor() {}
 
-    @Get()
-    index() {
-        console.log('home');
-        return { json: true };
-    }
+  @Get()
+  index() {
+    console.log("home");
+    return { message: "home" };
+  }
 }

@@ -1,6 +1,6 @@
 export declare class Home {
     constructor();
     index(): {
-        json: boolean;
+        message: string;
     };
 }

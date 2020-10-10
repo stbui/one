@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import * as express from "express";
+
 import { RouteDefinition } from "./RouteDefinition";
-import { IP, PORT } from "./config";
 
 import { G } from "./gateway";
 
@@ -39,12 +39,6 @@ export class Runner {
       });
     });
 
-    this.bootstrap();
-  }
-
-  static bootstrap() {
-    app.listen(PORT, () => {
-      console.log(`Started proxy on http://${IP}:${PORT}`);
-    });
+    return app;
   }
 }

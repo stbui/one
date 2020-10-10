@@ -7,12 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Controller, Get } from '../core';
+import { Controller, Get } from "../core";
 let Home = class Home {
     constructor() { }
     index() {
-        console.log('home');
-        return { json: true };
+        console.log("home");
+        return { message: "home" };
     }
 };
 __decorate([
@@ -22,7 +22,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], Home.prototype, "index", null);
 Home = __decorate([
-    Controller('/home'),
+    Controller("/home"),
     __metadata("design:paramtypes", [])
 ], Home);
 export { Home };

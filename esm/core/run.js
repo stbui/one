@@ -1,6 +1,5 @@
 import "reflect-metadata";
 import * as express from "express";
-import { IP, PORT } from "./config";
 import { G } from "./gateway";
 const app = express();
 export class Runner {
@@ -23,12 +22,7 @@ export class Runner {
                 });
             });
         });
-        this.bootstrap();
-    }
-    static bootstrap() {
-        app.listen(PORT, () => {
-            console.log(`Started proxy on http://${IP}:${PORT}`);
-        });
+        return app;
     }
 }
 //# sourceMappingURL=run.js.map
