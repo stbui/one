@@ -2,7 +2,7 @@ import "reflect-metadata";
 import { metadata } from "../constants";
 
 export const Option = (option: object = {}): MethodDecorator => {
-  return (target: any, propertyKey: string): void => {
+  return (target: any, propertyKey: string | symbol): void => {
     if (!Reflect.hasMetadata("option", target.constructor)) {
       Reflect.defineMetadata("option", [], target.constructor);
     }

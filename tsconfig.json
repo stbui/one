@@ -1,17 +1,22 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
     "module": "commonjs",
-    "moduleResolution": "Node",
     "declaration": true,
-    "removeComments": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "importHelpers": true,
+    "removeComments": false,
+    "noLib": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
     "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./lib",
-    "baseUrl": "./",
-    "incremental": true
-  }
+    "sourceMap": false,
+    "allowJs": false,
+    "strict": true,
+    "strictNullChecks": false
+  },
+  "exclude": ["../node_modules", "./**/*.spec.ts"]
 }

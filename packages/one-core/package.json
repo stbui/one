@@ -1,0 +1,35 @@
+{
+  "name": "@stbui/one-core",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "stbui <w431106@163.com>",
+  "homepage": "https://github.com/stbui/proxy#readme",
+  "license": "ISC",
+  "main": "lib/one-core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stbui/proxy.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/stbui/proxy/issues"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
