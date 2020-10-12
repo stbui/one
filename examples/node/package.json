@@ -1,0 +1,42 @@
+{
+    "name": "node",
+    "private": "true",
+    "version": "0.0.0",
+    "main": "dist/node.cjs.js",
+    "module": "dist/node.esm.js",
+    "browser": "dist/node.umd.js",
+    "description": "> TODO: description",
+    "author": "stbui <w431106@163.com>",
+    "homepage": "https://github.com/stbui/proxy#readme",
+    "license": "ISC",
+    "publishConfig": {
+        "registry": "http://registry.npm.taobao.org/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stbui/proxy.git"
+    },
+    "bugs": {
+        "url": "https://github.com/stbui/proxy/issues"
+    },
+    "scripts": {
+        "build:bundle": "rollup --config",
+        "build:bundle:watch": "rollup --config --watch",
+        "build": "yarn run build-cjs && yarn run build-esm",
+        "build-cjs": "rimraf ./lib && tsc",
+        "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
+        "watch": "rimraf ./lib && tsc --watch",
+        "prettier": "prettier --write \"{src,test}/**/*.ts\""
+    },
+    "dependencies": {
+        "@stbui/one-common": "0.0.0",
+        "@stbui/one-core": "0.0.0",
+        "reflect-metadata": "^0.1.13"
+    },
+    "devDependencies": {
+        "rollup": "^2.29.0",
+        "@rollup/plugin-node-resolve": "9.0.0",
+        "@rollup/plugin-commonjs": "^15.1.0",
+        "@rollup/plugin-typescript": "^6.0.0"
+    }
+}
