@@ -80,3 +80,4 @@ report_*.xml
 packages/*/yarn.lock
 lib
 esm
+dist

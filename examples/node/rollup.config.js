@@ -1,6 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import json from '@rollup/plugin-json';
 
 import pkg from './package.json';
 
@@ -11,7 +12,6 @@ export default {
         { file: pkg.module, format: 'es' },
         { file: pkg.browser, format: 'umd' },
     ],
-    plugins: [typescript({ sourceMap: false })],
-    external: Object.keys(pkg.dependencies),
-    // plugins: [resolve(), commonjs()],
+    plugins: [typescript({ sourceMap: false }), resolve(), commonjs(), json()],
+    // external: Object.keys(pkg.dependencies),
 };

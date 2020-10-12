@@ -1,27 +1,32 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ESNext",
-    "module": "commonjs",
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
-    "noUnusedLocals": false,
-    "sourceMap": false,
-    "declaration": true,
-    "skipLibCheck": true,
-    "allowJs": false,
-    "strict": true,
-    "strictNullChecks": false,
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "ESNext",
+        "module": "commonjs",
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "noUnusedLocals": false,
+        "sourceMap": false,
+        "declaration": true,
+        "skipLibCheck": true,
+        "allowJs": false,
+        "strict": true,
+        "strictNullChecks": false,
 
-    "suppressImplicitAnyIndexErrors": true,
-    "importHelpers": true,
-    "noLib": false,
-    "lib": ["es2015", "dom"]
-  },
-  "exclude": ["**/*.spec.ts"]
+        "suppressImplicitAnyIndexErrors": true,
+        "importHelpers": true,
+        "noLib": false,
+        "lib": ["es6"],
+
+        "noUnusedParameters": false,
+        "noEmit": true,
+        "noEmitOnError": false,
+        "pretty": true
+    },
+    "exclude": ["**/*.spec.ts"]
 }
