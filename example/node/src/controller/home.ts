@@ -1,4 +1,5 @@
-import { Controller, Get } from "@stbui/one-platform-node";
+import { Controller } from "@stbui/one-common";
+import { Get } from "@stbui/one-platform-node";
 
 @Controller("/home")
 export class Home {

@@ -14,14 +14,12 @@ export class Runner {
     controllers.forEach((controller) => {
       const instance = new controller();
       const prefix = Reflect.getMetadata("prefix", controller);
-      const routes: Array<RouteDefinition> = Reflect.getMetadata(
-        "routes",
-        controller
-      );
+      const routes = Reflect.getMetadata("routes", controller);
 
       routes.forEach((route) => {
+        const path = prefix + route.path;
         app[route.requestMethod](
-          prefix + route.path,
+          path,
           (req: express.Request, res: express.Response) => {
             const result = instance[route.methodName](req, res);
             if (result) {

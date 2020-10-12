@@ -16,10 +16,10 @@ export function Controller(options: object): ClassDecorator;
 export function Controller(prefix?: string | object): ClassDecorator {
   const defaultPath = "/";
 
-  const path = prefix;
+  const path = prefix || defaultPath;
 
   return (target: Object) => {
     Reflect.defineMetadata("stbui", "apm", target);
-    Reflect.defineMetadata(PATH_METADATA, [], target);
+    Reflect.defineMetadata(PATH_METADATA, path, target);
   };
 }

@@ -1,4 +1,5 @@
-import { Controller, Get, Proxy } from "@stbui/one-platform-node";
+import { Controller } from "@stbui/one-common";
+import { Get, Proxy } from "@stbui/one-platform-node";
 
 @Controller("/custom/monitor")
 export class CustomMonitor {

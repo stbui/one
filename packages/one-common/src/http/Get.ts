@@ -1,19 +1,11 @@
 import "reflect-metadata";
 
-export const Get = (path: string = ""): MethodDecorator => {
-  return (target, propertyKey: string | symbol): void => {
-    if (!Reflect.hasMetadata("routes", target.constructor)) {
-      Reflect.defineMetadata("routes", [], target.constructor);
-    }
+import { PATH_METADATA, METHOD_METADATA } from "../constants";
 
-    const routes = Reflect.getMetadata("routes", target.constructor);
-
-    routes.push({
-      requestMethod: "get",
-      path,
-      methodName: propertyKey,
-    });
-
-    Reflect.defineMetadata("routes", routes, target.constructor);
+export const Get = (path: string = "/"): MethodDecorator => {
+  return (target: object, propertyKey: string | symbol, descriptor?) => {
+    Reflect.defineMetadata(PATH_METADATA, path, descriptor.value);
+    Reflect.defineMetadata(METHOD_METADATA, "GET", descriptor.value);
+    return descriptor;
   };
 };
