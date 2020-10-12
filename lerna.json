@@ -1,4 +1,12 @@
 {
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "allowBranch": ["master", "next"],
+      "message": "chore(release): Publish"
+    }
+  },
   "packages": ["packages/*", "example/*"],
   "version": "0.0.0"
 }

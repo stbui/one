@@ -6,7 +6,10 @@ export const Option = (option = {}) => {
             Reflect.defineMetadata("option", [], target.constructor);
         }
         const options = Reflect.getMetadata("option", target.constructor);
-        options.push(Object.assign(Object.assign({}, option), { methodName: propertyKey }));
+        options.push({
+            ...option,
+            methodName: propertyKey,
+        });
         Reflect.defineMetadata(metadata.OPTION_IDENTIFIER, options, target.constructor);
     };
 };

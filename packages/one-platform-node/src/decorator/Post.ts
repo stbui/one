@@ -1,8 +1,8 @@
 import "reflect-metadata";
-import { RouteDefinition } from "./RouteDefinition";
+import { RouteDefinition } from "../interfaces";
 
 export const Post = (path: string = ""): MethodDecorator => {
-  return (target, propertyKey: string): void => {
+  return (target, propertyKey: string | symbol): void => {
     if (!Reflect.hasMetadata("routes", target.constructor)) {
       Reflect.defineMetadata("routes", [], target.constructor);
     }

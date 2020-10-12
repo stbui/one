@@ -1,0 +1,34 @@
+{
+  "name": "cli",
+  "private": "true",
+  "bin": "lib/index.js",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "stbui <w431106@163.com>",
+  "homepage": "https://github.com/stbui/proxy#readme",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stbui/proxy.git"
+  },
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "rm -rf ./lib && tsc",
+    "build:esm": "rm -rf ./esm && tsc --outDir esm --module es2015",
+    "watch": "tsc --watch",
+    "start": "tsc && nodemon lib/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/stbui/proxy/issues"
+  },
+  "dependencies": {
+    "@stbui/one-cli": "0.0.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

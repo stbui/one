@@ -3,17 +3,12 @@ import * as express from "express";
 
 import { RouteDefinition } from "./interfaces";
 
-import { G } from "./gateway";
-
 const app = express();
 
 export class Runner {
   static run(controllers) {
     // 健康检查
     app.get("/health", (req, res) => res.status(200).send("OK"));
-
-    //
-    G(app);
 
     // 路由的实现
     controllers.forEach((controller) => {

@@ -1,10 +1,10 @@
 import "reflect-metadata";
 
-import http from "http";
-import url from "url";
+import * as http from "http";
+import * as url from "url";
 
 export const Proxy = (option): MethodDecorator => {
-  return (target, propertyKey: string): void => {};
+  return (target, propertyKey: string | Symbol): void => {};
 };
 
 export const Request = (req, res) => {

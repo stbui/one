@@ -1,22 +1,27 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
+    "baseUrl": ".",
+    "target": "ESNext",
     "module": "commonjs",
-    "declaration": true,
-    "noImplicitAny": false,
-    "skipLibCheck": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": false,
-    "importHelpers": true,
     "removeComments": false,
-    "noLib": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2017",
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": false,
     "sourceMap": false,
+    "declaration": true,
+    "skipLibCheck": true,
     "allowJs": false,
     "strict": true,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+
+    "suppressImplicitAnyIndexErrors": true,
+    "importHelpers": true,
+    "noLib": false,
+    "lib": ["es2015", "dom"]
   },
-  "exclude": ["../node_modules", "./**/*.spec.ts"]
+  "exclude": ["**/*.spec.ts"]
 }

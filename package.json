@@ -8,8 +8,8 @@
   "typings": "./lib/index.d.ts",
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "build": "npm run build:cjs && npm run build:esm",
-    "build:cli": "lerna run build --scope @stbui/one-cli"
+    "build:cli": "lerna run build --scope @stbui/one-cli",
+    "start:node": "cd example/node && yarn start"
   },
   "engines": {
     "node": ">=6"

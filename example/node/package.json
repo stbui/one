@@ -6,14 +6,6 @@
   "author": "stbui <w431106@163.com>",
   "homepage": "https://github.com/stbui/proxy#readme",
   "license": "ISC",
-  "main": "lib/one-platform-koa.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "publishConfig": {
     "registry": "http://registry.npm.taobao.org/"
   },
@@ -22,7 +14,11 @@
     "url": "git+https://github.com/stbui/proxy.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "rm -rf ./lib && tsc",
+    "build:esm": "rm -rf ./esm && tsc --outDir esm --module es2015",
+    "watch": "tsc --watch",
+    "start": "tsc && nodemon lib/index.js"
   },
   "bugs": {
     "url": "https://github.com/stbui/proxy/issues"

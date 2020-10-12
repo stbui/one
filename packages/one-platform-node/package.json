@@ -1,18 +1,14 @@
 {
   "name": "@stbui/one-platform-node",
   "version": "0.0.0",
+  "bin": ".bin/index.js",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "typings": "./lib/index.d.ts",
   "description": "> TODO: description",
   "author": "stbui <w431106@163.com>",
   "homepage": "https://github.com/stbui/proxy#readme",
   "license": "ISC",
-  "main": "lib/one-platform-node.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "publishConfig": {
     "registry": "http://registry.npm.taobao.org/"
   },

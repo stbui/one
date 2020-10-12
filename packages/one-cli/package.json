@@ -1,7 +1,6 @@
 {
   "name": "@stbui/one-cli",
   "version": "0.0.0",
-  "private": true,
   "bin": ".bin/index.js",
   "main": "lib/index.js",
   "module": "esm/index.js",

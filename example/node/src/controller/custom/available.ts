@@ -1,4 +1,4 @@
-import { Controller, Get } from "../../core";
+import { Controller, Get } from "@stbui/one-platform-node";
 
 @Controller("/custom/available")
 export class CustomAvailable {
