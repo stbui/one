@@ -4,8 +4,6 @@
  * https://github.com/stbui/apm
  */
 
-import 'reflect-metadata';
-
 /**
  * module
  * - `controllers`

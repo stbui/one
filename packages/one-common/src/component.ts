@@ -4,10 +4,6 @@
  * https://github.com/stbui/apm
  */
 
-export function Injectable(): ClassDecorator {
-    return (target: Object) => {};
-}
-
 export function Component(): ClassDecorator {
-    return (target: Object) => {};
+  return (target: Object) => {};
 }

@@ -1,4 +1,5 @@
-import { Command, Option, Action, Container } from "@stbui/one-cli";
+import { Command, Option, Action } from "@stbui/one-common";
+import { Container } from "@stbui/one-cli";
 //
 export class Common {
   @Option({ name: "version", alias: "v", description: "version" })

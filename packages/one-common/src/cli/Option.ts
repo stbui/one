@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { metadata } from "../constants";
+import { OPTION_METADATA } from "../constants";
 
 export const Option = (option: object = {}): MethodDecorator => {
   return (target: any, propertyKey: string | symbol): void => {
@@ -14,10 +14,6 @@ export const Option = (option: object = {}): MethodDecorator => {
       methodName: propertyKey,
     });
 
-    Reflect.defineMetadata(
-      metadata.OPTION_IDENTIFIER,
-      options,
-      target.constructor
-    );
+    Reflect.defineMetadata(OPTION_METADATA, options, target.constructor);
   };
 };

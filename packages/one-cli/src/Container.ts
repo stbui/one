@@ -1,5 +1,9 @@
 import "reflect-metadata";
-import { metadata } from "./constants";
+import {
+  COMMAND_METADATA,
+  OPTION_METADATA,
+  ACTION_METADATA,
+} from "@stbui/one-common";
 import { Command } from "./Command";
 
 export class Container {
@@ -16,17 +20,11 @@ export class Container {
 
   private resolve(commands) {
     commands.forEach((command) => {
-      const indentifier = Reflect.getMetadata(
-        metadata.COMMAND_IDENTIFIER,
-        command
-      );
+      const indentifier = Reflect.getMetadata(COMMAND_METADATA, command);
 
       if (this.args.input === indentifier) {
         let factory = new command();
-        const options = Reflect.getMetadata(
-          metadata.OPTION_IDENTIFIER,
-          command
-        );
+        const options = Reflect.getMetadata(OPTION_METADATA, command);
         options.forEach((option) => {
           const input = this.args.flags;
           const value = input[`--${option.name}`];
@@ -40,7 +38,7 @@ export class Container {
           }
         });
 
-        const run = Reflect.getMetadata(metadata.ACTION_IDENTIFIER, command);
+        const run = Reflect.getMetadata(ACTION_METADATA, command);
         if (run) {
           factory[run]();
         }

@@ -3,17 +3,25 @@
  * Copyright Stbui All Rights Reserved.
  * https://github.com/stbui/apm
  */
+import { PROPERTY_DEPS_METADATA } from "./constants";
 
-import 'reflect-metadata';
+export const isFunction = (fn): boolean => typeof fn === "function";
 
-export const isFunction = (fn): boolean => typeof fn === 'function';
+export function Inject(token?: any) {
+  return (target: object, key: string | symbol, index?: number) => {
+    token = token || Reflect.getMetadata("design:type", target, key);
 
-export function Inject(token: any): ParameterDecorator {
-    return (target, key, index) => {
-        const args = Reflect.getMetadata('self:paramtypes', target) || [];
-        const type = isFunction(token) ? token.name : token;
+    const type = isFunction(token) ? token.name : token;
 
-        args.push({ index, param: type });
-        Reflect.defineMetadata('self:paramtypes', args, target);
-    };
+    let properties =
+      Reflect.getMetadata(PROPERTY_DEPS_METADATA, target.constructor) || [];
+
+    properties = [...properties, { key, type }];
+
+    Reflect.defineMetadata(
+      PROPERTY_DEPS_METADATA,
+      properties,
+      target.constructor
+    );
+  };
 }
