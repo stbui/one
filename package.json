@@ -18,13 +18,13 @@
         "examples/*",
         "packages/*"
     ],
-    "dependencies": {
-        "express": "^4.17.1",
-        "query-string": "^6.13.2",
-        "reflect-metadata": "^0.1.13",
-        "typescript": "^4.0.2"
-    },
     "devDependencies": {
+        "nodemon": "^1.11.0",
+        "rollup": "^2.29.0",
+        "@rollup/plugin-node-resolve": "9.0.0",
+        "@rollup/plugin-commonjs": "^15.1.0",
+        "@rollup/plugin-typescript": "^6.0.0",
+        "@rollup/plugin-json": "^4.1.0",
         "lerna": "^3.22.1",
         "prettier": "^2.0.5",
         "typescript": "^4.0.2",

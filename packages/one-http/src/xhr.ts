@@ -12,6 +12,7 @@ export abstract class XhrFactory {
 
 export class BrowserXhr implements XhrFactory {
     build() {
+        // @ts-ignore
         return new XMLHttpRequest();
     }
 }
