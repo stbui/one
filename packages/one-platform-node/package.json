@@ -7,11 +7,11 @@
     "typings": "./lib/index.d.ts",
     "description": "> TODO: description",
     "author": "stbui <w431106@163.com>",
-    "homepage": "https://github.com/stbui/proxy#readme",
+    "homepage": "https://github.com/stbui/one#readme",
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/stbui/proxy.git"
+        "url": "git+https://github.com/stbui/one.git"
     },
     "scripts": {
         "build": "yarn run build:cjs && yarn run build:esm",
@@ -21,7 +21,7 @@
         "start": "tsc && nodemon lib/index.js"
     },
     "bugs": {
-        "url": "https://github.com/stbui/proxy/issues"
+        "url": "https://github.com/stbui/one/issues"
     },
     "dependencies": {
         "@stbui/one-common": "^0.0.0",

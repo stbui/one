@@ -2,6 +2,12 @@
     "name": "@stbui/onejs",
     "version": "0.0.0",
     "private": true,
+    "homepage": "https://github.com/stbui/one#readme",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stbui/one.git"
+    },
     "scripts": {
         "build": "lerna run build",
         "build:cli": "lerna run build --scope @stbui/one-cli",
@@ -18,6 +24,9 @@
         "examples/*",
         "packages/*"
     ],
+    "bugs": {
+        "url": "https://github.com/stbui/one/issues"
+    },
     "devDependencies": {
         "nodemon": "^1.11.0",
         "rollup": "^2.29.0",

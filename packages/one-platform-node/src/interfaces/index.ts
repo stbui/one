@@ -1,1 +1,1 @@
-export * from "./RouteDefinition";
+export * from './RouteDefinition';

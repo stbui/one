@@ -7,14 +7,14 @@
     "browser": "dist/node.umd.js",
     "description": "> TODO: description",
     "author": "stbui <w431106@163.com>",
-    "homepage": "https://github.com/stbui/proxy#readme",
+    "homepage": "https://github.com/stbui/one#readme",
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/stbui/proxy.git"
+        "url": "git+https://github.com/stbui/one.git"
     },
     "bugs": {
-        "url": "https://github.com/stbui/proxy/issues"
+        "url": "https://github.com/stbui/one/issues"
     },
     "scripts": {
         "build:bundle": "rollup --config",

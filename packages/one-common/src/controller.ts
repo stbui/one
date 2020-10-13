@@ -1,11 +1,11 @@
 /**
  * @license
  * Copyright Stbui All Rights Reserved.
- * https://github.com/stbui/apm
+ * https://github.com/stbui/one
  */
 
-import "reflect-metadata";
-import { PATH_METADATA } from "./constants";
+import 'reflect-metadata';
+import { PATH_METADATA } from './constants';
 
 export function Controller(): ClassDecorator;
 
@@ -14,12 +14,12 @@ export function Controller(prefix: string): ClassDecorator;
 export function Controller(options: object): ClassDecorator;
 
 export function Controller(prefix?: string | object): ClassDecorator {
-  const defaultPath = "/";
+    const defaultPath = '/';
 
-  const path = prefix || defaultPath;
+    const path = prefix || defaultPath;
 
-  return (target: Object) => {
-    Reflect.defineMetadata("stbui", "apm", target);
-    Reflect.defineMetadata(PATH_METADATA, path, target);
-  };
+    return (target: Object) => {
+        Reflect.defineMetadata('stbui', 'apm', target);
+        Reflect.defineMetadata(PATH_METADATA, path, target);
+    };
 }
