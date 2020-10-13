@@ -5,7 +5,7 @@
     "main": "dist/node.cjs.js",
     "module": "dist/node.esm.js",
     "browser": "dist/node.umd.js",
-    "description": "> TODO: description",
+    "description": "> 一套架构，多平台运行",
     "author": "stbui <stbui@stbui.com>",
     "homepage": "https://github.com/stbui/one#readme",
     "license": "ISC",

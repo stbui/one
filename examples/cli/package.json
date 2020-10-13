@@ -1,9 +1,9 @@
 {
     "name": "cli",
     "private": "true",
-    "bin": "lib/index.js",
+    "bin": "app.js",
     "version": "0.0.5-alpha.0",
-    "description": "> TODO: description",
+    "description": "> 一套架构，多平台运行",
     "author": "stbui <stbui@stbui.com>",
     "homepage": "https://github.com/stbui/one#readme",
     "license": "ISC",
