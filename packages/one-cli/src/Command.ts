@@ -1,3 +1,9 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ * https://github.com/stbui/one
+ */
+
 // @ts-nocheck
 const FLAG_REGEX_PATTERN = /^-{1,2}/;
 

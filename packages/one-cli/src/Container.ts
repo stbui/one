@@ -1,3 +1,9 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ * https://github.com/stbui/one
+ */
+
 import 'reflect-metadata';
 import { COMMAND_METADATA, OPTION_METADATA, ACTION_METADATA } from '@stbui/one-common';
 import { Command } from './Command';
