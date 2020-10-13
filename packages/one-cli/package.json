@@ -19,5 +19,8 @@
         "@stbui/one-common": "^0.0.4-alpha.0",
         "reflect-metadata": "^0.1.13"
     },
-    "gitHead": "84aea4b3bc7c955cf04f0e5681ff813449a04a0d"
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "51388bcd2272517bb3a177559c5ab04e86e2eb0f"
 }
