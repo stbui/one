@@ -28,7 +28,6 @@
     "dependencies": {
         "@stbui/one-common": "^0.0.5-alpha.0",
         "@stbui/one-core": "^0.0.5-alpha.0",
-        "@stbui/one-platform-node": "^0.0.5-alpha.0",
-        "reflect-metadata": "^0.1.13"
+        "@stbui/one-platform-node": "^0.0.5-alpha.0"
     }
 }
