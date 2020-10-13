@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.0](https://github.com/stbui/proxy/compare/v0.0.1-alpha.0...v0.0.2-alpha.0) (2020-10-13)
+
+
+### Features
+
+* wip ([da1a68b](https://github.com/stbui/proxy/commit/da1a68bf83e034906d6eeb882820373ea100641c))
+
+
+
+
+
 ## 0.0.1-alpha.0 (2020-10-13)
 
 
