@@ -1,7 +1,7 @@
 {
     "name": "node",
     "private": "true",
-    "version": "0.0.2-alpha.0",
+    "version": "0.0.3-alpha.0",
     "main": "dist/node.cjs.js",
     "module": "dist/node.esm.js",
     "browser": "dist/node.umd.js",
@@ -26,9 +26,9 @@
         "start": "node ./lib"
     },
     "dependencies": {
-        "@stbui/one-common": "^0.0.2-alpha.0",
-        "@stbui/one-core": "^0.0.2-alpha.0",
-        "@stbui/one-platform-node": "^0.0.2-alpha.0",
+        "@stbui/one-common": "^0.0.3-alpha.0",
+        "@stbui/one-core": "^0.0.3-alpha.0",
+        "@stbui/one-platform-node": "^0.0.3-alpha.0",
         "reflect-metadata": "^0.1.13"
     }
 }

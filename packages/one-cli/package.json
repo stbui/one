@@ -1,6 +1,6 @@
 {
     "name": "@stbui/one-cli",
-    "version": "0.0.2-alpha.0",
+    "version": "0.0.3-alpha.0",
     "bin": ".bin/index.js",
     "main": "lib/index.js",
     "module": "esm/index.js",
@@ -16,7 +16,7 @@
         "node": ">=6"
     },
     "dependencies": {
-        "@stbui/one-common": "^0.0.2-alpha.0",
+        "@stbui/one-common": "^0.0.3-alpha.0",
         "reflect-metadata": "^0.1.13"
     },
     "gitHead": "d92ebfa8a5ce229cee1b4b4faffdd5845669fea7"
