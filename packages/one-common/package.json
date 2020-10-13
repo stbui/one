@@ -28,5 +28,8 @@
     "devDependencies": {
         "nodemon": "^1.11.0"
     },
-    "gitHead": "d92ebfa8a5ce229cee1b4b4faffdd5845669fea7"
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "84aea4b3bc7c955cf04f0e5681ff813449a04a0d"
 }
