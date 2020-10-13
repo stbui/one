@@ -13,7 +13,7 @@
         "build:cli": "lerna run build --scope @stbui/one-cli",
         "build:node": "lerna run build:bundle --scope node",
         "release": "yarn build && lerna publish --exact --conventional-commits",
-        "start:node": "cd example/node && yarn start",
+        "start:node": "lerna run start --scope node",
         "prettier": "prettier --config ./.prettierrc.js --write --list-different \"packages/*/src/**/*.{js,json,ts,tsx}\"",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
     },

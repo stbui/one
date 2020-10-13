@@ -1,5 +1,4 @@
 import 'reflect-metadata';
-import { RouteDefinition } from '../interfaces';
 
 export const Get = (path: string = ''): MethodDecorator => {
     return (target, propertyKey: string | symbol): void => {
@@ -7,7 +6,7 @@ export const Get = (path: string = ''): MethodDecorator => {
             Reflect.defineMetadata('routes', [], target.constructor);
         }
 
-        const routes = Reflect.getMetadata('routes', target.constructor) as Array<RouteDefinition>;
+        const routes = Reflect.getMetadata('routes', target.constructor);
         routes.push({
             requestMethod: 'get',
             path,

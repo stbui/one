@@ -23,8 +23,6 @@ export class Runner {
     static run(module) {
         this.dependenciesScanner.scan(module);
         this.injector.createInstancesOfDependencies();
-
-        this.setupRoutes();
     }
 
     static setupRoutes() {
@@ -39,5 +37,9 @@ export class Runner {
         routes.forEach(route => {
             console.log(routes);
         });
+    }
+
+    static getModules() {
+        return this.container.getModules();
     }
 }

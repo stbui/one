@@ -2,10 +2,10 @@ import { Runner } from '@stbui/one-platform-node';
 import { IP, PORT } from './config';
 import { App } from './controller/app';
 import { Home } from './controller/home';
-import { CustomAvailable, CustomMonitor } from './controller/custom';
+import { CustomController } from './controller/custom';
 
 function bootstrap() {
-    const controllers = [App, Home, CustomAvailable, CustomMonitor];
+    const controllers = [App, Home, CustomController];
 
     const app = Runner.run(controllers);
     app.listen(PORT);

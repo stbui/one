@@ -22,7 +22,8 @@
         "build": "yarn run build-cjs && yarn run build-esm",
         "build-cjs": "rimraf ./lib && tsc",
         "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
-        "watch": "rimraf ./lib && tsc --watch"
+        "watch": "rimraf ./lib && tsc --watch",
+        "start": "node ./lib"
     },
     "dependencies": {
         "@stbui/one-common": "0.0.0",

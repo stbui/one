@@ -1,13 +1,18 @@
-import { Controller } from "@stbui/one-common";
-import { Get } from "@stbui/one-platform-node";
+import { Controller, Get } from '@stbui/one-common';
 
-@Controller("/home")
+@Controller('/home')
 export class Home {
-  constructor() {}
+    constructor() {}
 
-  @Get()
-  index() {
-    console.log("home");
-    return { message: "home" };
-  }
+    @Get()
+    index() {
+        console.log('home');
+        return { message: 'home' };
+    }
+
+    @Get('/test')
+    test(req, res) {
+        console.log('test');
+        return { message: 'test' };
+    }
 }
