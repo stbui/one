@@ -1,11 +1,4 @@
-import 'reflect-metadata';
-
 import { PATH_METADATA, METHOD_METADATA } from '../constants';
+import { RequestMapping } from './request-mapping';
 
-export const Get = (path: string = '/'): MethodDecorator => {
-    return (target: object, propertyKey: string | symbol, descriptor?: any) => {
-        Reflect.defineMetadata(PATH_METADATA, path, descriptor.value);
-        Reflect.defineMetadata(METHOD_METADATA, 'GET', descriptor.value);
-        return descriptor;
-    };
-};
+export const Get = (path?: string | string[]) => RequestMapping({ [PATH_METADATA]: path, [METHOD_METADATA]: 'GET' });

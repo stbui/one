@@ -6,7 +6,7 @@
     "module": "esm/index.js",
     "typings": "./lib/index.d.ts",
     "description": "> TODO: description",
-    "author": "stbui <w431106@163.com>",
+    "author": "stbui <stbui@stbui.com>",
     "homepage": "https://github.com/stbui/one#readme",
     "license": "ISC",
     "repository": {

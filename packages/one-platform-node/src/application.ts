@@ -10,7 +10,7 @@ import { PATH_METADATA, METHOD_METADATA } from '@stbui/one-common';
 
 const app = express();
 
-export class Runner {
+export class Application {
     static run(controllers) {
         // 健康检查
         app.get('/health', (req, res) => res.status(200).send('OK'));
