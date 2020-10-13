@@ -2,31 +2,18 @@
     "compilerOptions": {
         "baseUrl": ".",
         "target": "ESNext",
-        "module": "commonjs",
-        "removeComments": false,
-        "preserveConstEnums": true,
+        "module": "CommonJS",
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "noImplicitAny": false,
         "allowSyntheticDefaultImports": true,
-        "noUnusedLocals": false,
-        "sourceMap": false,
-        "declaration": true,
+        "esModuleInterop": true,
         "skipLibCheck": true,
-        "allowJs": false,
+        "declaration": true,
+        "sourceMap": true,
         "strict": true,
-        "strictNullChecks": false,
-
-        "suppressImplicitAnyIndexErrors": true,
-        "importHelpers": true,
-        "noLib": false,
-        "lib": ["es6"],
-
-        "noUnusedParameters": false,
-        "noEmit": true,
-        "noEmitOnError": false,
-        "pretty": true
+        "lib": ["dom", "es2017"]
     },
     "exclude": ["**/*.spec.ts"]
 }

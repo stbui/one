@@ -22,12 +22,12 @@
         "build": "yarn run build-cjs && yarn run build-esm",
         "build-cjs": "rimraf ./lib && tsc",
         "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
-        "watch": "rimraf ./lib && tsc --watch",
-        "prettier": "prettier --write \"{src,test}/**/*.ts\""
+        "watch": "rimraf ./lib && tsc --watch"
     },
     "dependencies": {
         "@stbui/one-common": "0.0.0",
         "@stbui/one-core": "0.0.0",
+        "@stbui/one-platform-node": "0.0.0",
         "reflect-metadata": "^0.1.13"
     }
 }

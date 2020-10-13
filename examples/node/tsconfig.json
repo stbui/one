@@ -1,31 +1,8 @@
 {
+    "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "lib": ["es6"],
-        "module": "ESNext",
-        "noEmit": true,
-        "noEmitOnError": false,
-        "pretty": true,
-
-        "target": "ESNext",
-        "removeComments": false,
-        "preserveConstEnums": true,
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "noImplicitAny": false,
-        "allowSyntheticDefaultImports": true,
-        "noUnusedLocals": false,
-        "sourceMap": false,
-        "declaration": true,
-        "skipLibCheck": true,
-        "allowJs": false,
-        "strict": true,
-        "strictNullChecks": false,
-        "noUnusedParameters": false,
-        "suppressImplicitAnyIndexErrors": true,
-        "importHelpers": true,
-        "noLib": false
+        "outDir": "lib",
+        "rootDir": "src"
     },
-    "exclude": ["dist", "node_modules", "test/types"],
-    "include": ["src/**/*", "types/**/*"]
+    "include": ["src"]
 }

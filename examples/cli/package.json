@@ -25,8 +25,5 @@
         "@stbui/one-common": "0.0.0",
         "@stbui/one-cli": "0.0.0",
         "reflect-metadata": "^0.1.13"
-    },
-    "devDependencies": {
-        "nodemon": "^1.11.0"
     }
 }

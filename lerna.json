@@ -1,5 +1,4 @@
 {
-    "npmClient": "yarn",
     "command": {
         "publish": {
             "conventionalCommits": true,
@@ -7,6 +6,8 @@
             "message": "chore(release): Publish"
         }
     },
-    "packages": ["packages/*", "examples/*"],
+    "npmClient": "yarn",
+    "packages": ["packages/*"],
+    "useWorkspaces": true,
     "version": "0.0.0"
 }

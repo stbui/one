@@ -21,6 +21,7 @@
     "devDependencies": {
         "nodemon": "^1.11.0",
         "rollup": "^2.29.0",
+        "@rollup/plugin-buble": "^0.21.3",
         "@rollup/plugin-node-resolve": "9.0.0",
         "@rollup/plugin-commonjs": "^15.1.0",
         "@rollup/plugin-typescript": "^6.0.0",
