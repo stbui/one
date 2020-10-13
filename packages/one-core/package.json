@@ -1,6 +1,6 @@
 {
     "name": "@stbui/one-core",
-    "version": "0.0.0",
+    "version": "0.0.1-alpha.0",
     "main": "lib/index.js",
     "module": "esm/index.js",
     "typings": "./lib/index.d.ts",
@@ -26,7 +26,7 @@
         "url": "https://github.com/stbui/one/issues"
     },
     "dependencies": {
-        "@stbui/one-common": "^0.0.0",
+        "@stbui/one-common": "^0.0.1-alpha.0",
         "reflect-metadata": "^0.1.13"
     },
     "devDependencies": {
