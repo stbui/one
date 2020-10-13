@@ -12,14 +12,12 @@
         "watch": "tsc --watch",
         "start": "tsc && nodemon lib/index.js"
     },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
-    },
     "engines": {
         "node": ">=6"
     },
     "dependencies": {
         "@stbui/one-common": "^0.0.1-alpha.0",
         "reflect-metadata": "^0.1.13"
-    }
+    },
+    "gitHead": "e1743349fe849c07e6529666433d3a4180146f9e"
 }

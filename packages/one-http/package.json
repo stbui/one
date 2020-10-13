@@ -9,9 +9,6 @@
         "type": "git",
         "url": "git+https://github.com/stbui/one.git"
     },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
-    },
     "scripts": {
         "build": "yarn run build:cjs && yarn run build:esm",
         "build:cjs": "rm -rf ./lib && tsc",
@@ -28,5 +25,6 @@
     },
     "devDependencies": {
         "nodemon": "^1.11.0"
-    }
+    },
+    "gitHead": "e1743349fe849c07e6529666433d3a4180146f9e"
 }
