@@ -12,6 +12,9 @@
         "watch": "tsc --watch",
         "start": "tsc && nodemon lib/index.js"
     },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
     "engines": {
         "node": ">=6"
     },
