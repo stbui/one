@@ -7,13 +7,14 @@
 import 'reflect-metadata';
 import express from 'express';
 import { PATH_METADATA, METHOD_METADATA } from '@stbui/one-common';
+import { health } from './health';
 
 const app = express();
 
 export class Application {
     static run(controllers) {
         // 健康检查
-        app.get('/health', (req, res) => res.status(200).send('OK'));
+        health(app);
 
         console.log('[stbui]:', '注册路由');
         controllers.forEach(controller => {
@@ -33,20 +34,29 @@ export class Application {
 
                 //
                 console.log('[stbui]:', requestMethod, prefix + routePath);
-
-                app[requestMethod](prefix + routePath, (req: express.Request, res: express.Response, next) => {
-                    const result = instance[method](req, res, next);
-                    if (result) {
-                        res.status(200).send(result);
-                    } else {
-                        next();
-                    }
-                });
+                this.setupRoutes(requestMethod, prefix + routePath, instance[method]);
             });
         });
 
         console.log();
 
+        return app;
+    }
+
+    static setupRoutes(method: string, path: string, fn: Function) {
+        app[method](path, (req: express.Request, res: express.Response, next) => {
+            const result = fn(req, res, next);
+            if (result) {
+                res.status(200).send(result);
+            } else {
+                next();
+            }
+        });
+    }
+
+    static listen(port: number, callback?: () => void) {
+        app.listen(port, callback);
+        console.log(`Server running on http://127.0.0.1:${port}`);
         return app;
     }
 

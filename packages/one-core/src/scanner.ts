@@ -19,7 +19,7 @@ export class DependenciesScanner {
     private scanForModules(module: AppModule) {
         this.storeModule(module);
 
-        const innerModules = Reflect.getMetadata('modules', module) || [];
+        const innerModules = Reflect.getMetadata(module, 'modules') || [];
         innerModules.map(module => this.scanForModules(module));
     }
 

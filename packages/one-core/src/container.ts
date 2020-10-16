@@ -4,7 +4,6 @@
  * https://github.com/stbui/one
  */
 
-import 'reflect-metadata';
 import { AppModule } from './interfaces/module.interface';
 import { Component, InstanceWrapper } from './interfaces/component.interface';
 

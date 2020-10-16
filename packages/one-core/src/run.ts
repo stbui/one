@@ -6,15 +6,12 @@
 
 import { Container } from './container';
 import { DependenciesScanner } from './scanner';
-import { Injector } from './injector';
+import { InstanceLoader } from './instance-loader';
 
-/**
- * this is Runner.
- */
 export class Runner {
     private static container = new Container();
     private static dependenciesScanner = new DependenciesScanner(Runner.container);
-    private static injector = new Injector(Runner.container);
+    private static instanceLoader = new InstanceLoader(Runner.container);
 
     /**
      * 开始分析模块依赖
@@ -22,21 +19,7 @@ export class Runner {
      */
     static run(module) {
         this.dependenciesScanner.scan(module);
-        this.injector.createInstancesOfDependencies();
-    }
-
-    static setupRoutes() {
-        const modules = this.container.getModules();
-
-        modules.forEach((module: any, moduleName: any) => {
-            this.setupRouters(module.controllers, moduleName);
-        });
-    }
-
-    static setupRouters(routes, moduleName: string) {
-        routes.forEach(route => {
-            console.log(routes);
-        });
+        this.instanceLoader.createInstancesOfDependencies();
     }
 
     static getModules() {

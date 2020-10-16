@@ -1,0 +1,36 @@
+{
+    "name": "@stbui/one-platform-koa",
+    "version": "0.0.5-alpha.0",
+    "bin": ".bin/index.js",
+    "main": "lib/index.js",
+    "module": "esm/index.js",
+    "typings": "./lib/index.d.ts",
+    "description": "> 一套架构，多平台运行",
+    "author": "stbui <stbui@stbui.com>",
+    "homepage": "https://github.com/stbui/one#readme",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stbui/one.git"
+    },
+    "scripts": {
+        "build": "yarn run build:cjs && yarn run build:esm",
+        "build:cjs": "rm -rf ./lib && tsc",
+        "build:esm": "rm -rf ./esm && tsc --outDir esm --module es2015",
+        "watch": "tsc --watch",
+        "start": "tsc && nodemon lib/index.js"
+    },
+    "bugs": {
+        "url": "https://github.com/stbui/one/issues"
+    },
+    "dependencies": {
+        "koa": "^2.13.0"
+    },
+    "devDependencies": {
+        "@types/koa": "2.11.5"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "51388bcd2272517bb3a177559c5ab04e86e2eb0f"
+}
