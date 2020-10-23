@@ -1,6 +1,6 @@
 {
     "name": "@stbui/one-http",
-    "version": "0.0.5-alpha.0",
+    "version": "0.0.6-alpha.0",
     "description": "> 一套架构，多平台运行",
     "author": "stbui <stbui@stbui.com>",
     "homepage": "https://github.com/stbui/one#readme",
@@ -20,7 +20,7 @@
         "url": "https://github.com/stbui/one/issues"
     },
     "dependencies": {
-        "@stbui/one-common": "^0.0.5-alpha.0",
+        "@stbui/one-common": "^0.0.6-alpha.0",
         "reflect-metadata": "^0.1.13"
     },
     "devDependencies": {
