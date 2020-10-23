@@ -4,4 +4,4 @@
  * https://github.com/stbui/one
  */
 
-export * from './Application';
+export * from './application';
