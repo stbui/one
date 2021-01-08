@@ -1,0 +1,33 @@
+import { Command, Action } from '@stbui/one-common';
+const pkg = require('../package.json');
+
+@Command({
+    name: 'help',
+    description: '初始化',
+    example: {
+        command: 'cli help',
+        description: '初始化',
+    },
+})
+export class HelpCommand {
+    constructor(private readonly service) {}
+
+    @Action()
+    run() {
+        const commands = this.service.getCommands();
+
+        console.log(pkg.name);
+        console.log('');
+
+        commands.forEach(command => {
+            console.log(`  ${command.name}  \<command\> -- ${command.description}`);
+            console.log('');
+
+            command.options.forEach(option => {
+                console.log(`    -${option.propertyName}  -${option.alias}    \<option\>  - ${option.description}`);
+            });
+
+            console.log('');
+        });
+    }
+}

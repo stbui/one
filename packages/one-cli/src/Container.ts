@@ -5,46 +5,29 @@
  */
 
 import 'reflect-metadata';
-import { COMMAND_METADATA, OPTION_METADATA, ACTION_METADATA } from '@stbui/one-common';
-import { Command } from './Command';
+
+export interface Type<T = any> extends Function {
+    new (...args: any[]): T;
+}
+
+export interface Module {
+    name: string;
+    metatype: Type<any>;
+    instance: any;
+}
 
 export class Container {
-    private args: any;
+    private readonly commands = new Map<string, Module>();
 
-    constructor(commands) {
-        this.args = Command();
-        this.resolve(commands);
-    }
-
-    static run(commands) {
-        return new Container(commands);
-    }
-
-    private resolve(commands) {
-        commands.forEach(command => {
-            const indentifier = Reflect.getMetadata(COMMAND_METADATA, command);
-
-            if (this.args.input === indentifier) {
-                let factory = new command();
-                const options = Reflect.getMetadata(OPTION_METADATA, command);
-                options.forEach(option => {
-                    const input = this.args.flags;
-                    const value = input[`--${option.name}`];
-
-                    if (value) {
-                        factory[option.methodName](value, {
-                            command: indentifier,
-                            options,
-                            instance: factory,
-                        });
-                    }
-                });
-
-                const run = Reflect.getMetadata(ACTION_METADATA, command);
-                if (run) {
-                    factory[run]();
-                }
-            }
+    addCommand(command: Type<any>) {
+        return this.commands.set(command.name, {
+            name: command.name,
+            metatype: command,
+            instance: null,
         });
+    }
+
+    getCommands(): Map<string, Module> {
+        return this.commands;
     }
 }

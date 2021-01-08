@@ -4,15 +4,20 @@
  * https://github.com/stbui/one
  */
 
+export interface ModuleMetadata {
+    imports?: Array<any>;
+    controllers?: any[];
+    providers?: any[];
+    exports?: any[];
+}
+
 /**
  * module
  * - `controllers`
  * - `providers`
  * @param metadata
  */
-export function Module(metadata): ClassDecorator {
-    overrideModuleMetadata(metadata);
-
+export function Module(metadata: ModuleMetadata): ClassDecorator {
     return (target: object) => {
         for (const property in metadata) {
             if (metadata.hasOwnProperty(property)) {
@@ -20,10 +25,4 @@ export function Module(metadata): ClassDecorator {
             }
         }
     };
-}
-
-function overrideModuleMetadata(moduleMetadata) {
-    moduleMetadata.modules = moduleMetadata.imports ? moduleMetadata.imports : moduleMetadata.modules;
-
-    moduleMetadata.components = moduleMetadata.providers ? moduleMetadata.providers : moduleMetadata.components;
 }

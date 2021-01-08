@@ -4,60 +4,97 @@
  * https://github.com/stbui/one
  */
 
-import { AppModule } from './interfaces/module.interface';
-import { Component, InstanceWrapper } from './interfaces/component.interface';
-
-export interface ModuleDependencies {
-    components?: Map<Component, InstanceWrapper<Component>>;
-}
+import { Type } from './interfaces/type.interface';
+import { Module } from './module';
 
 export class Container {
-    private readonly modules = new Map();
+    private readonly modules = new Map<string, Module>();
 
     /**
      * 将模块加入到列表中
-     * @param module 模块
+     * @param metatype
      */
-    addModule(module: AppModule) {
-        if (!this.modules.has(module)) {
-            this.modules.set(module, {
-                relatedModules: new Set<ModuleDependencies>(),
-                components: new Map<string, InstanceWrapper<any>>(),
-                controllers: new Map<string, InstanceWrapper<any>>(),
-            });
+    addModule(metatype: any) {
+        if (!metatype) {
+            throw new Error('error');
         }
+
+        // test
+        // compile
+        // 生成模块token标识，相同的模块返回相同的token
+        // const token = 'test1234567890';
+        const token = JSON.stringify({ id: '123456', module: metatype.name });
+        const type = metatype;
+
+        if (this.modules.has(token)) {
+            return;
+        }
+
+        const moduleRef = new Module(type, this);
+        this.modules.set(token, moduleRef);
+
+        return moduleRef;
     }
 
-    getModules(): Map<AppModule, ModuleDependencies> {
+    /**
+     * 该方法返回所有模块
+     */
+    getModules(): Map<string, Module> {
         return this.modules;
     }
 
-    addRelatedModule(relatedModule, module) {
-        if (this.modules.has(module)) {
-            const storedModule = this.modules.get(module);
-            const related = this.modules.get(relatedModule);
-
-            storedModule.relatedModules.add(related);
-        }
+    /**
+     * 根据token，返回对应模块
+     * @param moduleKey 模块标识
+     */
+    getModuleByKey(moduleKey: string) {
+        return this.modules.get(moduleKey);
     }
 
-    addComponent(component: any, module: AppModule) {
-        if (this.modules.has(module)) {
-            const storedModule = this.modules.get(module);
-            storedModule.components.set(component, {
-                instance: null,
-                isResolved: false,
-            });
+    addImport(relatedModule: any, token: string) {
+        if (!this.modules.has(token)) {
+            return;
         }
+
+        const moduleRef = this.modules.get(token);
+        //  compile
+        // test
+        const relatedModuleToken = '123';
+        const related = this.modules.get(relatedModuleToken);
+        // @ts-ignore
+        moduleRef.addRelatedModule(related);
     }
 
-    addController(controller: any, module: AppModule) {
-        if (this.modules.has(module)) {
-            const storedModule = this.modules.get(module);
-            storedModule.controllers.set(controller, {
-                instance: null,
-                isResolved: false,
-            });
+    /**
+     * 添加提供者
+     * @param provider 提供者方法
+     * @param token 模块标识
+     */
+    addProvider(provider, token: string): string {
+        if (!provider) {
+            throw new Error('provider error');
         }
+
+        if (!this.modules.has(token)) {
+            throw new Error('token errror');
+        }
+
+        const moduleRef = this.modules.get(token);
+        // @ts-ignore
+        return moduleRef.addProvider(provider);
+    }
+
+    /**
+     * 添加控制器
+     * @param controller 控制器方法
+     * @param token 模块标识
+     */
+    addController(controller: Type<any>, token: string) {
+        if (!this.modules.has(token)) {
+            throw new Error('token error');
+        }
+        const moduleRef = this.modules.get(token);
+        // @ts-ignore
+        moduleRef.addController(controller);
     }
 }

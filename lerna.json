@@ -2,17 +2,12 @@
     "command": {
         "publish": {
             "conventionalCommits": true,
-            "allowBranch": [
-                "master",
-                "next"
-            ],
+            "allowBranch": ["master", "next"],
             "message": "chore(release): Publish"
         }
     },
     "npmClient": "yarn",
-    "packages": [
-        "packages/*"
-    ],
+    "packages": ["packages/*", "examples/*"],
     "useWorkspaces": true,
     "version": "0.0.7-alpha.0"
 }

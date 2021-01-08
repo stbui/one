@@ -4,6 +4,14 @@ export const SCOPE_OPTIONS_METADATA = 'scope:options';
 export const METHOD_METADATA = 'method';
 
 //
-export const COMMAND_METADATA = 'command';
-export const OPTION_METADATA = 'option';
-export const ACTION_METADATA = 'action';
+export const COMMAND_METADATA = 'command_metadata_key';
+export const OPTION_METADATA = 'option_metadata_Key';
+export const ACTION_METADATA = 'action_metadata_Key';
+
+//
+export const MODULE_METADATA = {
+    IMPORTS: 'imports',
+    PROVIDERS: 'providers',
+    CONTROLLERS: 'controllers',
+    EXPORTS: 'exports',
+};

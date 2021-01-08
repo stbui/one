@@ -6,13 +6,17 @@
 
 import { Container } from './container';
 import { Injector } from './injector';
+import { Module } from './module';
 
 //注射器，依赖注入
 export class InstanceLoader {
-    private instanceLoader = new Injector();
+    private readonly injector = new Injector();
 
-    constructor(private container: Container) {}
+    constructor(private readonly container: Container) {}
 
+    /**
+     * 实例化依赖
+     */
     createInstancesOfDependencies() {
         const modules = this.container.getModules();
 
@@ -20,41 +24,57 @@ export class InstanceLoader {
         this.createInstances(modules);
     }
 
-    private createPrototypes(modules) {
+    /**
+     * 创建模块中依赖provider，controller原型
+     * @param modules
+     */
+    private createPrototypes(modules: Map<string, Module>) {
         modules.forEach(module => {
-            this.createPrototypesOfComponents(module);
+            this.createPrototypesOfProviders(module);
             this.createPrototypesOfControllers(module);
         });
     }
 
-    private createInstances(modules) {
+    private createInstances(modules: Map<string, Module>) {
         modules.forEach(module => {
-            this.createInstancesOfComponents(module);
+            this.createInstancesOfProviders(module);
             this.createInstancesOfControllers(module);
         });
     }
 
-    private createInstancesOfComponents(module) {
-        module.components.forEach((wrapper, componentType) => {
-            this.instanceLoader.loadInstanceOfComponent(componentType, module);
+    /**
+     * 提供者原型对象
+     * @param module
+     */
+    private createPrototypesOfProviders(module: Module) {
+        const { providers } = module;
+        providers.forEach(wrapper => {
+            this.injector.loadPrototype(wrapper, providers);
         });
     }
 
-    private createInstancesOfControllers(module) {
-        module.controllers.forEach((wrapper, componentType) => {
-            this.instanceLoader.loadInstanceOfController(componentType, module);
-        });
-    }
-
-    private createPrototypesOfComponents(module) {
-        module.components.forEach((wrapper, componentType) => {
-            this.instanceLoader.loadPrototypeOfInstance(componentType, module.components);
-        });
-    }
-
+    /**
+     * 控制器原型对象
+     * @param module
+     */
     private createPrototypesOfControllers(module) {
-        module.controllers.forEach((wrapper, componentType) => {
-            this.instanceLoader.loadPrototypeOfInstance(componentType, module.controllers);
+        const { controllers } = module;
+        controllers.forEach(wrapper => {
+            this.injector.loadPrototype(wrapper, controllers);
+        });
+    }
+
+    private createInstancesOfProviders(module: Module) {
+        const { providers } = module;
+        providers.forEach(wrapper => {
+            this.injector.loadProvider(wrapper, module);
+        });
+    }
+
+    private createInstancesOfControllers(module: Module) {
+        const { controllers } = module;
+        controllers.forEach(wrapper => {
+            this.injector.loadController(wrapper, module);
         });
     }
 }

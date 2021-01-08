@@ -1,24 +1,54 @@
-import { Controller, Get, Module } from "@stbui/one-common";
-import { Runner } from "@stbui/one-core";
+import { Controller, Get, Module, Injectable } from '@stbui/one-common';
+import { Factory } from '@stbui/one-core';
 
-@Controller("/custom")
+@Controller('/custom')
 export class CustomController {
-  constructor() {}
+    constructor() {
+        console.log('CustomController: constructor');
+    }
 
-  @Get("/monitor")
-  monitor(req, res) {
-    return { message: "CustomMonitor" };
-  }
+    @Get('/custom1')
+    monitor(req, res) {
+        return { message: 'CustomController custom1' };
+    }
 
-  @Get("/available")
-  available(req, res) {
-    return { message: "CustomMonitor" };
-  }
+    @Get('/custom2')
+    available(req, res) {
+        return { message: 'CustomController custom2' };
+    }
+}
+
+@Controller()
+export class AppController {
+    constructor() {
+        console.log('AppController: constructor');
+    }
+
+    @Get('/app1')
+    monitor(req, res) {
+        return { message: 'AppController app1' };
+    }
+
+    @Get('/app2')
+    available(req, res) {
+        return { message: 'AppController app2' };
+    }
+}
+@Injectable()
+export class AppService {
+    constructor() {
+        console.log('AppService: constructor');
+    }
 }
 
 @Module({
-  controllers: [CustomController],
+    controllers: [AppController, CustomController],
+    providers: [AppService],
 })
 class App {}
 
-Runner.run(App);
+function bootstrap() {
+    Factory.create(App);
+}
+
+bootstrap();

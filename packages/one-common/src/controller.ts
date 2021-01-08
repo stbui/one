@@ -7,13 +7,17 @@
 import 'reflect-metadata';
 import { PATH_METADATA } from './constants';
 
+export interface ControllerOptions {
+    path?: string | string[];
+}
+
 export function Controller(): ClassDecorator;
 
-export function Controller(prefix: string): ClassDecorator;
+export function Controller(prefix: string | string[]): ClassDecorator;
 
-export function Controller(options: object): ClassDecorator;
+export function Controller(options: ControllerOptions): ClassDecorator;
 
-export function Controller(prefix?: string | object): ClassDecorator {
+export function Controller(prefix?: string | string[] | ControllerOptions): ClassDecorator {
     const defaultPath = '/';
 
     const path = prefix || defaultPath;

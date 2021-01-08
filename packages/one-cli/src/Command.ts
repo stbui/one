@@ -47,3 +47,23 @@ export const Command = (args = process.argv.slice(2), options: any = {}) => {
         input: inputs[0],
     };
 };
+
+export class CommandAdapter {
+    command: any;
+
+    constructor(protected readonly instance?: any) {
+        this.instance = Command();
+    }
+
+    getInstance() {
+        return this.instance;
+    }
+
+    initCommand() {
+        this.command = this.instance;
+    }
+
+    getCommnad() {
+        return this.command;
+    }
+}

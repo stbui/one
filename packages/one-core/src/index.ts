@@ -9,3 +9,4 @@ export * from './injector';
 export * from './instance-loader';
 export * from './scanner';
 export * from './run';
+export * from './factory';

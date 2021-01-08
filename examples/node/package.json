@@ -5,7 +5,7 @@
     "main": "dist/node.cjs.js",
     "module": "dist/node.esm.js",
     "browser": "dist/node.umd.js",
-    "description": "> 一套架构，多平台运行",
+    "description": "> 前后台统一构架解决方案",
     "author": "stbui <stbui@stbui.com>",
     "homepage": "https://github.com/stbui/one#readme",
     "license": "ISC",
@@ -26,16 +26,8 @@
         "start": "node ./lib"
     },
     "dependencies": {
-        "@rollup/plugin-buble": "^0.21.3",
-        "@rollup/plugin-commonjs": "^15.1.0",
-        "@rollup/plugin-json": "^4.1.0",
-        "@rollup/plugin-node-resolve": "9.0.0",
         "@stbui/one-common": "^0.0.6-alpha.0",
         "@stbui/one-core": "^0.0.6-alpha.0",
-        "@stbui/one-platform-node": "^0.0.7-alpha.0",
-        "rollup": "^2.29.0",
-        "rollup-plugin-clear": "^2.0.7",
-        "rollup-plugin-terser": "^7.0.2",
-        "rollup-plugin-typescript2": "^0.27.3"
+        "@stbui/one-platform-node": "^0.0.7-alpha.0"
     }
 }

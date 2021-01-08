@@ -5,52 +5,51 @@
  */
 
 import 'reflect-metadata';
+import { MODULE_METADATA } from '@stbui/one-common';
 import { Container } from './container';
-import { AppModule } from './interfaces/module.interface';
+import { Type } from './interfaces/type.interface';
 
 export class DependenciesScanner {
-    constructor(private container: Container) {}
+    constructor(private readonly container: Container) {}
 
-    scan(module: AppModule) {
+    scan(module: Type<any>) {
         this.scanForModules(module);
         this.scanModulesForDependencies();
     }
 
-    private scanForModules(module: AppModule) {
-        this.storeModule(module);
+    scanForModules(module: any) {
+        const moduleInstance = this.insertModule(module);
 
-        const innerModules = Reflect.getMetadata(module, 'modules') || [];
-        innerModules.map(module => this.scanForModules(module));
+        const modules = Reflect.getMetadata(MODULE_METADATA.IMPORTS, module) || [];
+        modules.map(module => this.scanForModules(module));
+
+        return moduleInstance;
     }
 
-    private storeModule(module: AppModule) {
-        this.container.addModule(module);
+    insertModule(module: any) {
+        return this.container.addModule(module);
     }
 
-    private scanModulesForDependencies() {
+    /**
+     * 分析模块相关依赖
+     */
+    scanModulesForDependencies() {
         const modules = this.container.getModules();
 
-        modules.forEach((deps, module) => {
-            const modules = Reflect.getMetadata('modules', module) || [];
-            modules.map(module => this.storeRelatedModule(module, module));
+        modules.forEach(({ metatype }, token) => {
+            const modules = Reflect.getMetadata(MODULE_METADATA.IMPORTS, metatype) || [];
+            modules.forEach(module => this.insertImport(module, token));
 
-            const components = Reflect.getMetadata('components', module) || [];
-            components.map(component => this.storeComponent(component, module));
-
-            const controllers = Reflect.getMetadata('controllers', module) || [];
-            controllers.map(controller => this.storeController(controller, module));
+            const controllers = Reflect.getMetadata(MODULE_METADATA.CONTROLLERS, metatype) || [];
+            controllers.forEach(controller => this.insertController(controller, token));
         });
     }
 
-    private storeRelatedModule(related, module: AppModule) {
-        this.container.addRelatedModule(related, module);
+    private insertImport(related: any, token: string) {
+        this.container.addImport(related, token);
     }
 
-    private storeComponent(component, module: AppModule) {
-        this.container.addComponent(component, module);
-    }
-
-    private storeController(controller, module: AppModule) {
-        this.container.addController(controller, module);
+    private insertController(controller: Type<any>, token: string) {
+        this.container.addController(controller, token);
     }
 }

@@ -1,18 +1,4 @@
-# `@stbui/one-cli`
-
-nodejs 命令行
-
-# setup
-
-```bash
-npm install @stbui/one-clie
-```
-
-# example
-
-```js
 import { Command, Option, Action } from '@stbui/one-common';
-import { Factory } from '@stbui/one-cli';
 
 @Command({
     name: 'start',
@@ -44,10 +30,3 @@ export class StartCommand {
         console.log('StartCommand 已执行');
     }
 }
-
-function bootstrap() {
-    Factory.create([StartCommand]);
-}
-
-bootstrap();
-```
