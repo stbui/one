@@ -1,6 +1,6 @@
 {
     "name": "@stbui/one-platform-koa",
-    "version": "0.0.6-alpha.0",
+    "version": "0.0.8-alpha.0",
     "bin": ".bin/index.js",
     "main": "lib/index.js",
     "module": "esm/index.js",

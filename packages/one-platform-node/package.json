@@ -1,6 +1,6 @@
 {
     "name": "@stbui/one-platform-node",
-    "version": "0.0.7-alpha.0",
+    "version": "0.0.8-alpha.0",
     "bin": ".bin/index.js",
     "main": "lib/index.js",
     "module": "esm/index.js",
@@ -24,8 +24,8 @@
         "url": "https://github.com/stbui/one/issues"
     },
     "dependencies": {
-        "@stbui/one-common": "^0.0.6-alpha.0",
-        "@stbui/one-core": "^0.0.6-alpha.0",
+        "@stbui/one-common": "^0.0.8-alpha.0",
+        "@stbui/one-core": "^0.0.8-alpha.0",
         "express": "^4.17.1",
         "reflect-metadata": "^0.1.13"
     },
