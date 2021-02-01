@@ -1,7 +1,6 @@
 {
     "name": "@stbui/one-cli",
     "version": "0.0.8-alpha.0",
-    "bin": ".bin/index.js",
     "main": "lib/index.js",
     "module": "esm/index.js",
     "typings": "./lib/index.d.ts",
