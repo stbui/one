@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9-alpha.0](https://github.com/stbui/one/compare/v0.0.8-alpha.0...v0.0.9-alpha.0) (2021-02-01)
+
+
+### Bug Fixes
+
+* **one-cli:** bin无效 ([b6a1109](https://github.com/stbui/one/commit/b6a1109047e06e5199899bb48ebc12cb9eaa3ffd))
+
+
+
+
+
 ## [0.0.8-alpha.0](https://github.com/stbui/one/compare/v0.0.7-alpha.0...v0.0.8-alpha.0) (2021-01-19)
 
 
