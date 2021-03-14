@@ -10,5 +10,5 @@ export * from './instance-loader';
 export * from './scanner';
 export * from './service';
 export * from './factory';
-export * from './command';
-export * from './help-command'
+export * from './adapter/command';
+export * from './command/help-command';

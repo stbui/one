@@ -5,7 +5,7 @@ nodejs 命令行
 # setup
 
 ```bash
-npm install @stbui/one-clie
+npm install @stbui/one-cli @stbui/one-common --save
 ```
 
 # example

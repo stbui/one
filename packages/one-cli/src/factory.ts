@@ -8,10 +8,10 @@ import { Container } from './container';
 import { DependenciesScanner } from './scanner';
 import { InstanceLoader } from './instance-loader';
 import { Application } from './application';
-import { CommandAdapter } from './command';
+import { builtCommandAdapter } from './adapter/command';
 
 export class FactoryStatic {
-    create(module, cmdAdapter = new CommandAdapter()) {
+    create(module: any, cmdAdapter = new builtCommandAdapter()) {
         const container = new Container();
         this.initialize(module, container);
 

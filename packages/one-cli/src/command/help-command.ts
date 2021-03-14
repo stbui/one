@@ -1,3 +1,9 @@
+/**
+ * @license
+ * Copyright Stbui All Rights Reserved.
+ * https://github.com/stbui/one
+ */
+
 import { Command, Action } from '@stbui/one-common';
 const pkg = require('../package.json');
 

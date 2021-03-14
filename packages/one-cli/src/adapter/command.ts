@@ -7,7 +7,7 @@
 // @ts-nocheck
 const FLAG_REGEX_PATTERN = /^-{1,2}/;
 
-export const Command = (args = process.argv.slice(2), options: any = {}) => {
+export const builtCommand = (args = process.argv.slice(2), options: any = {}) => {
     const inputs = [];
 
     const flags = {};
@@ -48,22 +48,18 @@ export const Command = (args = process.argv.slice(2), options: any = {}) => {
     };
 };
 
-export class CommandAdapter {
-    command: any;
+export class builtCommandAdapter {
+    instance = builtCommand();
 
-    constructor(protected readonly instance?: any) {
-        this.instance = Command();
-    }
+    constructor() {}
+
+    initCommand() {}
 
     getInstance() {
         return this.instance;
     }
 
-    initCommand() {
-        this.command = this.instance;
-    }
-
     getCommnad() {
-        return this.command;
+        return this.instance;
     }
 }
