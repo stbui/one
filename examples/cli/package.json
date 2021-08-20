@@ -3,7 +3,7 @@
     "private": "true",
     "bin": "bin/cli.js",
     "version": "0.0.10-alpha.0",
-    "description": "> 前后台统一构架解决方案",
+    "description": "前后台全栈架构解决方案",
     "author": "stbui <stbui@stbui.com>",
     "homepage": "https://github.com/stbui/one#readme",
     "license": "ISC",
@@ -12,6 +12,7 @@
         "url": "git+https://github.com/stbui/one.git"
     },
     "scripts": {
+        "test": "node bin/cli.js start -p 3333",
         "build": "yarn run build:cjs && yarn run build:esm",
         "build:cjs": "rimraf ./lib && tsc",
         "build:esm": "rimraf ./esm && tsc --outDir esm --module es2015",

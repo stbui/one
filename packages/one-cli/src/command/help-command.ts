@@ -5,7 +5,7 @@
  */
 
 import { Command, Action } from '@stbui/one-common';
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 
 @Command({
     name: 'help',

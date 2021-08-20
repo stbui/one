@@ -53,7 +53,7 @@ export class Application {
     setupCommands(command, instanceWrapper: Module) {
         const { metatype, instance } = instanceWrapper;
 
-        if (this.args.input === command.name) {
+        if (this.args._[0] === command.name) {
             // option
             this.resovleProperties(metatype, (option, value) => {
                 instance[option.propertyName] = value;
@@ -69,12 +69,12 @@ export class Application {
      * @param callback
      */
     resovleProperties(metatype: Type<any>, callback: Function) {
-        const input = this.args.flags;
+        const input = this.args;
         const options = this.getMetadataOption(metatype);
 
         if (options) {
             options.forEach(option => {
-                const value = input[`-${option.alias}`] || input[`-${option.propertyName}`];
+                const value = input[option.alias] || input[option.propertyName];
                 if (value !== undefined) {
                     callback(option, value);
                 }
