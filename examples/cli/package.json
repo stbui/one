@@ -2,7 +2,7 @@
     "name": "cli",
     "private": "true",
     "bin": "bin/cli.js",
-    "version": "0.0.10-alpha.0",
+    "version": "0.0.10-alpha.1",
     "description": "前后台全栈架构解决方案",
     "author": "stbui <stbui@stbui.com>",
     "homepage": "https://github.com/stbui/one#readme",
@@ -23,7 +23,7 @@
         "url": "https://github.com/stbui/one/issues"
     },
     "dependencies": {
-        "@stbui/one-cli": "^0.0.10-alpha.0",
+        "@stbui/one-cli": "^0.0.10-alpha.1",
         "@stbui/one-common": "^0.0.8-alpha.0"
     }
 }

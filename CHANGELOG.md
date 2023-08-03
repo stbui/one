@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10-alpha.1](https://github.com/stbui/one/compare/v0.0.10-alpha.0...v0.0.10-alpha.1) (2023-08-03)
+
+
+### Bug Fixes
+
+* **one-cli:** 修复大小问题 ([19b7ae0](https://github.com/stbui/one/commit/19b7ae0a660fa2794adbf4f9fce0f63987ed18e9))
+
+
+### Features
+
+* wip ([f0fc8f5](https://github.com/stbui/one/commit/f0fc8f5b94adae3d294c4c6a612283b503d5d5fb))
+* wip ([0cc0787](https://github.com/stbui/one/commit/0cc078702361c400fe7b04eecc125ff852d3fb49))
+
+
+
+
+
 ## [0.0.10-alpha.0](https://github.com/stbui/one/compare/v0.0.8-alpha.0...v0.0.10-alpha.0) (2021-02-01)
 
 
