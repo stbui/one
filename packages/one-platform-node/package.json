@@ -26,11 +26,11 @@
     "dependencies": {
         "@stbui/one-common": "^0.0.8-alpha.0",
         "@stbui/one-core": "^0.0.10-alpha.1",
-        "express": "^4.17.1",
+        "express": "^4.18.2",
         "reflect-metadata": "^0.1.13"
     },
     "devDependencies": {
-        "@types/express": "4.11.1"
+        "@types/express": "^4.17.19"
     },
     "publishConfig": {
         "access": "public"
