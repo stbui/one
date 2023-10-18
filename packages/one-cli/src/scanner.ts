@@ -10,17 +10,21 @@ import { Container, Type } from './container';
 export class DependenciesScanner {
     constructor(private readonly container: Container) {}
 
-    scan(commands: any[]) {
-        this.scanForCommands(commands);
+    scan(useModules: any[]) {
+        this.scanForModules(useModules);
     }
 
-    scanForCommands(commands: any[]) {
-        commands.forEach(command => {
-            this.insertController(command);
+    private scanForModules(useModules: any[]) {
+        useModules.forEach(module => {
+            this.insertController(module);
         });
     }
 
-    private insertController(command: Type<any>) {
-        this.container.addCommand(command);
+    /**
+     * 添加到容器中
+     * @param module
+     */
+    private insertController(module: Type<any>) {
+        this.container.addCommand(module);
     }
 }

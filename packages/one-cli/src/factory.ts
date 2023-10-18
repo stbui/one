@@ -11,18 +11,20 @@ import { Application } from './application';
 import { builtCommandAdapter } from './adapter/command';
 
 export class FactoryStatic {
-    create(module: any, cmdAdapter = new builtCommandAdapter()) {
+    create(useModules: any[], cmdAdapter = new builtCommandAdapter()) {
         const container = new Container();
-        this.initialize(module, container);
+        this.initialize(useModules, container);
 
         const instance = new Application(container, cmdAdapter);
         return instance;
     }
 
-    initialize(command, container) {
+    initialize(useModules: any[], container: Container) {
+        // 将所有modlules添加到容器中
         const dependenciesScanner = new DependenciesScanner(container);
-        dependenciesScanner.scan(command);
+        dependenciesScanner.scan(useModules);
 
+        //
         const instanceLoader = new InstanceLoader(container);
         instanceLoader.createInstancesOfDependencies();
     }

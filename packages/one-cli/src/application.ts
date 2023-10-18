@@ -7,22 +7,30 @@
 import 'reflect-metadata';
 import { COMMAND_METADATA, OPTION_METADATA, ACTION_METADATA } from '@stbui/one-common';
 import { Container, Module, Type } from './container';
+import { builtCommandAdapter } from './adapter/command';
 
 export class Application {
     private args: any;
 
-    constructor(private readonly container: Container, private readonly commandAdapter) {
+    constructor(
+        private readonly container: Container,
+        private readonly commandAdapter: builtCommandAdapter
+    ) {
         this.registerCommand();
         this.resolve();
     }
 
     /**
-     * 注册服务
+     * 注册服务命令
      */
     registerCommand() {
         this.args = this.createCommand();
     }
 
+    /**
+     * 初始化命令并获取到命令解析结果
+     * @returns
+     */
     createCommand() {
         this.commandAdapter.initCommand();
         return this.commandAdapter.getCommnad();
@@ -48,32 +56,37 @@ export class Application {
     }
 
     /**
-     * 命令行执行
+     * 解析定义类型中的参数
      */
-    setupCommands(command, instanceWrapper: Module) {
+    setupCommands(command: ClassDecorator, instanceWrapper: Module) {
         const { metatype, instance } = instanceWrapper;
 
         if (this.args._[0] === command.name) {
-            // option
+            // 解析
             this.resovleProperties(metatype, (option, value) => {
+                // 将命令行参数结果更新到属性上
                 instance[option.propertyName] = value;
             });
-            // action
+            // 执行命令
             this.execCommands(metatype, instance);
         }
     }
 
     /**
-     * 解析选项
-     * @param metatype
-     * @param callback
+     * 解析类中所有属性中有@Option
+     * @param metatype: 用户类
+     * @param callback: 属性回调
      */
-    resovleProperties(metatype: Type<any>, callback: Function) {
+    resovleProperties(
+        metatype: Type<any>,
+        callback: (option: { alias: string; propertyName: string }, value: string) => void
+    ) {
         const input = this.args;
-        const options = this.getMetadataOption(metatype);
+        const options: any[] = this.getMetadataOption(metatype);
 
         if (options) {
             options.forEach(option => {
+                // 匹配命令参数返回的结果
                 const value = input[option.alias] || input[option.propertyName];
                 if (value !== undefined) {
                     callback(option, value);
@@ -83,11 +96,12 @@ export class Application {
     }
 
     /**
-     * 解析运行命令行
+     * 执行类上定义action的方法
      * @param metatype
      * @param instance
      */
     execCommands(metatype: Type<any>, instance: Function) {
+        //
         const exec = Reflect.getMetadata(ACTION_METADATA, metatype);
         if (exec) {
             instance[exec]();

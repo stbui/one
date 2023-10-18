@@ -11,11 +11,17 @@ export interface Type<T = any> extends Function {
 }
 
 export interface Module {
+    /** 类名字 */
     name: string;
+    /** 类 */
     metatype: Type<any>;
+    /** 实例化类 */
     instance: any;
 }
 
+/**
+ * 存储类的元数据
+ */
 export class Container {
     private readonly commands = new Map<string, Module>();
 
