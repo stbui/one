@@ -4,6 +4,7 @@
  * https://github.com/stbui/one
  */
 
+// @ts-ignore
 import { Command } from 'commander';
 
 export class CommanderAdapter {

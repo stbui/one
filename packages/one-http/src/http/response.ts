@@ -26,7 +26,6 @@ export abstract class HttpResponseBase {
 
 export class HttpResponse<T> extends HttpResponseBase {
     readonly body: T | null;
-    readonly type;
 
     constructor(
         init: {

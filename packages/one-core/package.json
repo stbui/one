@@ -13,13 +13,10 @@
         "url": "git+https://github.com/stbui/one.git"
     },
     "scripts": {
-        "build:bundle": "rollup --config",
-        "build:bundle:watch": "rollup --config --watch",
         "build": "yarn run build:cjs && yarn run build:esm",
         "build:cjs": "rimraf ./lib && tsc",
         "build:esm": "rimraf ./esm && tsc --outDir esm --module es2015",
-        "watch": "tsc --watch",
-        "start": "tsc && nodemon lib/index.js"
+        "watch": "tsc --watch"
     },
     "bugs": {
         "url": "https://github.com/stbui/one/issues"

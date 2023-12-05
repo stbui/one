@@ -14,6 +14,5 @@
         "packages/*",
         "examples/*"
     ],
-    "useWorkspaces": true,
     "version": "0.0.10-alpha.1"
 }

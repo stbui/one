@@ -29,6 +29,7 @@ export class InstanceWrapper<T = any> {
     public forwardRef?: boolean;
 
     private readonly values = new WeakMap<ContextId, InstancePerContext<T>>();
+    // @ts-ignore
     private readonly [INSTANCE_ID_SYMBOL]: string;
 
     constructor(metadata) {
