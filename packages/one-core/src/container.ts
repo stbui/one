@@ -59,7 +59,7 @@ export class Container {
         const moduleRef = this.modules.get(token);
         //  compile
         // test
-        const relatedModuleToken = '123';
+        const relatedModuleToken = '123456';
         const related = this.modules.get(relatedModuleToken);
         // @ts-ignore
         moduleRef.addRelatedModule(related);

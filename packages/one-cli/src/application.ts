@@ -101,10 +101,19 @@ export class Application {
      * @param instance
      */
     execCommands(metatype: Type<any>, instance: Function) {
-        //
-        const exec = Reflect.getMetadata(ACTION_METADATA, metatype);
-        if (exec) {
-            instance[exec]();
+        const callMethodName = Reflect.getMetadata(ACTION_METADATA, metatype);
+        if (callMethodName) {
+            instance[callMethodName]();
         }
+    }
+
+    pipe() {
+        const child = require('child_process').execSync(`$(npm bin)/${process.argv.slice(2).join(' ')}`, {
+            stdio: 'inherit',
+        });
+
+        child.on('exit', (code: number) => {
+            process.exit(code);
+        });
     }
 }
